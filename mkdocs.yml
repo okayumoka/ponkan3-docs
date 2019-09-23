@@ -2,14 +2,15 @@ site_name: 'Ponkan3 ドキュメント'
 site_description: 'Ponkan3 ドキュメント'
 site_author: 'okayu'
 copyright: '&copy; 2019 <a href="https://studiomikan.net/">Studio Mikan</a>'
+repo_name: 'okayumoka/ponkan3-docs'
+repo_url: https://github.com/okayumoka/ponkan3-docs
+edit_uri: ''
 theme:
   name: 'material'
   language: 'ja'
   font:
     text: 'Noto Sans JP'
     code: 'Inconsolata'
-  # feature:
-  #   tabs: true
   palette:
     primary: 'Deep Orange'
     accent: 'Deep Orange'
