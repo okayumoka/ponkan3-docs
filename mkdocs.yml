@@ -31,6 +31,7 @@ nav:
     - 画像の表示: basic/image.md
     - レイヤーとページ: basic/layer.md
     - トランジション: basic/trans.md
+    - 音声の再生: basic/sound.md
   - リファレンス:
     - スクリプトファイル文法: ref/syntax.md
     - コマンドリファレンス: ref/command_ref.md
