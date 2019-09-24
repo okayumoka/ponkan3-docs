@@ -85,3 +85,23 @@ Ponkan3ではBGMと効果音を特に区別しません。どちらも音声再�
 
 フェードが完了するのを待つには、[`waitsoundstop`](../ref/command_ref.md#waitsoundstop-waitsound)コマンドを使用します。
 ただし、音声がフェードされていない場合は何もしない（待たずに次に進む）ので注意してください。
+
+## バッファ番号エイリアス機能
+
+バッファ番号エイリアス機能は、バッファ番号指定の番号に名前を付けて、管理を簡単にする機能です。
+
+たとえば、バッファ0ではBGM、バッファ1では効果音を再生する場合に、
+それぞれのバッファに`"bgm"`や`"se"`という名前を付けることができます。
+わかりやすい名前を付けることで、スクリプトの見通しが良くなります。
+
+バッファ番号エイリアスの設定は、[`bufalias`](../ref/command_ref.md#bufalias)コマンドで行います。
+
+```plain
+# ゲーム開始スクリプト
+;call file: "script/init_system.pon"
+
+;bufalias name: "se", buf: "0"
+;loadsound "buf": "se", "file": "sound/pekowave1.mp3"
+
+こんにちは。
+```

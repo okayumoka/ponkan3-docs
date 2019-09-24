@@ -42,7 +42,6 @@ Ponkan3のゲームは、スクリプトファイル（KAG3でいうところの
 - [レイヤーとページ](basic/layer.md)
 - [トランジション](basic/trans.md)
 - [音声の再生](basic/sound.md)
-- バッファ番号エイリアス機能
 - マクロ機能
 - [JavaScriptと変数](../basic/javascript.md)
 - 条件分岐
