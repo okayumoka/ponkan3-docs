@@ -36,6 +36,7 @@ nav:
     - JavaScriptと変数: basic/javascript.md
     - マクロ機能: basic/macro.md
     - ボタンと条件分岐: basic/fork.md
+    - セーブ＆ロード機能: basic/save_and_load.md
   - リファレンス:
     - スクリプトファイル文法: ref/syntax.md
     - コマンドリファレンス: ref/command_ref.md

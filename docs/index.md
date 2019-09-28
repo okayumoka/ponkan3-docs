@@ -43,11 +43,11 @@ Ponkan3のゲームは、スクリプトファイル（KAG3でいうところの
 - [トランジション](basic/trans.md)
 - [音声の再生](basic/sound.md)
 - [スクリプト間の移動](basic/jump_call.md)
-- [JavaScriptと変数](../basic/javascript.md)
+- [JavaScriptと変数](basic/javascript.md)
 - [マクロ機能](basic/macro.md)
 - [ボタンと条件分岐](basic/fork.md)
 - [セーブ＆ロード機能](basic/save_and_load.md)
-- ゲームのリリース（配布）
+- [ゲームを配布する](basic/release.md)
 
 ### リファレンス
 

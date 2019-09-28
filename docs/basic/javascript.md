@@ -100,9 +100,9 @@ sv.isClearedSomeScenario = true;
 
 変数をクリアしたい場合は、以下のコマンドを使用してください。
 
-- 一時変数をクリア：[`cleartmpvar`](../ref/command_red.md#cleartmpvar)
-- ゲーム変数をクリア：[`cleargamevar`](../ref/command_red.md#cleargamevar)
-- システム変数をクリア：[`clearsysvar`](../ref/command_red.md#clearsysvar)
+- 一時変数をクリア：[`cleartmpvar`](../ref/command_ref.md#cleartmpvar)
+- ゲーム変数をクリア：[`cleargamevar`](../ref/command_ref.md#cleargamevar)
+- システム変数をクリア：[`clearsysvar`](../ref/command_ref.md#clearsysvar)
 
 特定の変数のみ削除したいときは、javascriptの`delete`文を使ってください。
 

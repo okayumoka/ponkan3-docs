@@ -20,8 +20,8 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
 -画像を用いて自由に作成できる「画像ボタン」
 
 の2種類があり、
-それぞれ[`textbutton`](../ref/command_red.md#textbutton-txtbtn)コマンドと
-[`imagebutton`](../ref/command_red.md#imagebutton-imgbtn)コマンドで表示できます。
+それぞれ[`textbutton`](../ref/command_ref.md#textbutton-txtbtn)コマンドと
+[`imagebutton`](../ref/command_ref.md#imagebutton-imgbtn)コマンドで表示できます。
 
 ## テキストボタンの表示
 
@@ -48,10 +48,10 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
 ```
 
 ボタンを表示した直後は、まだボタンを押すことはできません。
-[`unlockbuttons`](../ref/command_red.md#unlockbuttons-unlockbutton-unlock)
+[`unlockbuttons`](../ref/command_ref.md#unlockbuttons-unlockbutton-unlock)
 コマンドを実行して、初めてボタンが押下可能になります。
 また、ボタンが押されるのを待っているときはスクリプトを停止しておくべきなので、
-必ず [`s`](../ref/command_red.md#s) コマンドを書くようにしてください。
+必ず [`s`](../ref/command_ref.md#s) コマンドを書くようにしてください。
 
 この例では`jump`、`file`、`label`パラメータを指定しているので、
 `file`で指定したスクリプトの`label`の位置へジャンプします。
@@ -104,8 +104,8 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
 
 ## 変数（JavaScript）による分岐
 
-`if`コマンドは、指定したJavaScriptの評価結果が`true`の場合のみ、
-`endif`コマンドまでの間を実行します。
+[`if`](../ref/command_ref.md#if)コマンドは、指定したJavaScriptの評価結果が`true`の場合のみ、
+[`endif`](../ref/command_ref.md#endif)コマンドまでの間を実行します。
 
 以下の例では、`tv.scenarioNum`の値が1なので「現在はシナリオ1です。」と表示されます。
 
@@ -131,7 +131,8 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
 ;endif
 ```
 
-結果が`false`のとき、さらに追加の条件で判定したいときは、`elsif`コマンドを使用してください。
+結果が`false`のとき、さらに追加の条件で判定したいときは、
+[`elsif`](../ref/command_ref.md#elseif)コマンドを使用してください。
 
 以下の例では、`tv.scenarioNum`の値が3なので「シナリオ1ではなくて、シナリオ3ですね。」と表示されます。
 
