@@ -14,6 +14,8 @@ theme:
   palette:
     primary: 'Deep Orange'
     accent: 'Deep Orange'
+  logo:
+    icon: 'build'
 extra:
   search:
     languaextra:
@@ -37,6 +39,7 @@ nav:
     - マクロ機能: basic/macro.md
     - ボタンと条件分岐: basic/fork.md
     - セーブ＆ロード機能: basic/save_and_load.md
+    - ゲームを公開する: basic/release.md
   - リファレンス:
     - スクリプトファイル文法: ref/syntax.md
     - コマンドリファレンス: ref/command_ref.md

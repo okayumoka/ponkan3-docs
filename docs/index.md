@@ -47,7 +47,7 @@ Ponkan3のゲームは、スクリプトファイル（KAG3でいうところの
 - [マクロ機能](basic/macro.md)
 - [ボタンと条件分岐](basic/fork.md)
 - [セーブ＆ロード機能](basic/save_and_load.md)
-- [ゲームを配布する](basic/release.md)
+- [ゲームを公開する](basic/release.md)
 
 ### リファレンス
 
