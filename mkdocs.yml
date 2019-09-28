@@ -14,6 +14,8 @@ theme:
   palette:
     primary: 'Deep Orange'
     accent: 'Deep Orange'
+  logo:
+    icon: 'build'
 extra:
   search:
     languaextra:
@@ -30,6 +32,14 @@ nav:
     - メッセージ（文章）の表示: basic/message.md
     - 画像の表示: basic/image.md
     - レイヤーとページ: basic/layer.md
+    - トランジション: basic/trans.md
+    - 音声の再生: basic/sound.md
+    - スクリプト間の移動: basic/jump_call.md
+    - JavaScriptと変数: basic/javascript.md
+    - マクロ機能: basic/macro.md
+    - ボタンと条件分岐: basic/fork.md
+    - セーブ＆ロード機能: basic/save_and_load.md
+    - ゲームを公開する: basic/release.md
   - リファレンス:
     - スクリプトファイル文法: ref/syntax.md
     - コマンドリファレンス: ref/command_ref.md

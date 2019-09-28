@@ -195,8 +195,9 @@ class TsFileParser {
       md += `| パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |\n`;
       md += `|--------------|----------|------|--------------|------|\n`;
       tag.paramsList.forEach((param) => {
-        md += `| ${param.name} | ${typeMap[param.type]} | ${param.required} | ${param.defaultValue} | ${param.description} |\n`;
-      })
+        let description = param.description.replace(/\n/g, "<br>");
+        md += `| ${param.name} | ${typeMap[param.type]} | ${param.required} | ${param.defaultValue} | ${description} |\n`;
+      });
       md += `\n`;
     }
 

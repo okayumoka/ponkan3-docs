@@ -40,16 +40,14 @@ Ponkan3のゲームは、スクリプトファイル（KAG3でいうところの
 - [メッセージ（文章）の表示](basic/message.md)
 - [画像の表示](basic/image.md)
 - [レイヤーとページ](basic/layer.md)
-- レイヤーエイリアス機能
-- トランジション
-- 音声の再生
-- バッファ番号エイリアス機能
-- マクロ機能
-- [JavaScriptと変数](../basic/javascript.md)
-- 条件分岐
+- [トランジション](basic/trans.md)
+- [音声の再生](basic/sound.md)
+- [スクリプト間の移動](basic/jump_call.md)
+- [JavaScriptと変数](basic/javascript.md)
+- [マクロ機能](basic/macro.md)
+- [ボタンと条件分岐](basic/fork.md)
 - [セーブ＆ロード機能](basic/save_and_load.md)
-- スクリプト間の移動
-- ゲームのリリース（配布）
+- [ゲームを公開する](basic/release.md)
 
 ### リファレンス
 
@@ -61,10 +59,12 @@ Ponkan3のゲームは、スクリプトファイル（KAG3でいうところの
 #### システム
 
 - [コマンドショートカット機能](advanced/command_shortcut.md)
+- ループ処理
 - 右クリックサブルーチン
 - プラグイン機能
 - 未読/既読判定について
 - アイコン（favicon）を変更する
+- ゲームをアップデートする
 
 #### テキスト機能
 
@@ -80,7 +80,6 @@ Ponkan3のゲームは、スクリプトファイル（KAG3でいうところの
 #### トランジション
 
 #### 音声
-
 
 ## リンク
 
