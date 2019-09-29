@@ -40,7 +40,7 @@
     
     
       
-        <title>Node.js導入（Windows） - Ponkan3 ドキュメント</title>
+        <title>音声の再生 - Ponkan3 ドキュメント</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#nodejswindows" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Node.js導入（Windows）
+                音声の再生
               
             </span>
           
@@ -238,10 +238,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       チュートリアル
@@ -317,11 +319,91 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../sound/" title="音声の再生" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        音声の再生
+      </label>
+    
+    <a href="./" title="音声の再生" class="md-nav__link md-nav__link--active">
       音声の再生
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    音声の読み込み、再生、停止、解放
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ループ再生、音量などの設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumegvolume" class="md-nav__link">
+    volumeとgvolumeについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    読み込み時間について
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    フェード再生
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    再生停止やフェード完了を待つ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    バッファ番号エイリアス機能
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -503,6 +585,64 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    音声の読み込み、再生、停止、解放
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ループ再生、音量などの設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumegvolume" class="md-nav__link">
+    volumeとgvolumeについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    読み込み時間について
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    フェード再生
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    再生停止やフェード完了を待つ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    バッファ番号エイリアス機能
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -514,32 +654,78 @@
               
                 
                 
-                <h1 id="nodejswindows">Node.js導入（Windows）</h1>
-<p>注意：今後のNode.jsのバージョンアップで変更が入る可能性があります。
-あくまで参考程度にして下さい。</p>
-<p><a href="https://nodejs.org/ja/">Node.js 日本語サイト</a> からダウンロードします。
-今回は左側のLTS版をいダウンロードします。</p>
-<p><img alt="Node.jsダウンロード" src="../image/download.png" /></p>
-<p>ダウンロードしてきたインストーラーを起動してください。</p>
-<p><img alt="インストーラー01" src="../image/install_01.png" /></p>
-<p>Nextをクリックして次へ進みます。</p>
-<p><img alt="インストーラー02" src="../image/install_02.png" /></p>
-<p>ライセンスに同意して、Nextをクリックします。</p>
-<p><img alt="インストーラー03" src="../image/install_03.png" /></p>
-<p>インストール先を指定します。とくに理由がなければデフォルト値のままにします。</p>
-<p><img alt="インストーラー04" src="../image/install_04.png" /></p>
-<p>インストールするモジュールを選択します。基本的にはそのままにしておきます。</p>
-<p><img alt="インストーラー05" src="../image/install_05.png" /></p>
-<p>Installをクリックすると、実行するかどうかWindowsが確認してきます。「はい」をクリックするとインストールが始まります。</p>
-<p><img alt="インストーラー06" src="../image/install_06.png" /></p>
-<p>インストールが完了したら、Finishで終了します。</p>
-<p>インストールができているかどうか確認します。
-コマンドプロンプトまたはWindows PowerShellを開き、次のコマンドを実行します。</p>
-<pre><code class="bat">&gt; node --version
-v10.16.3
+                <h1 id="_1">音声の再生</h1>
+<p>Ponkan3では、ブラウザがサポートする音声ファイル（wav,mp3,oggなど）を再生することができます。</p>
+<p>Ponkan3ではBGMと効果音を特に区別しません。どちらも音声再生コマンドで再生してください。</p>
+<h2 id="_2">音声の読み込み、再生、停止、解放</h2>
+<p>音声を再生するためには、あらかじめ音声ファイルを読み込んでおく必要があります。</p>
+<p>音声の読み込みは<a href="../../ref/command_ref/#loadsound-sound"><code>loadsound</code></a>コマンドで行います。</p>
+<pre><code class="plain">;loadsound &quot;buf&quot;: 0, file: &quot;sound/pekowave1.mp3&quot;
 </code></pre>
 
-<p>Node.jsのバージョンが表示されれば、インストール完了です。</p>
+<p><code>buf</code>パラメータにはファイルを読み込む先の音声バッファ番号を指定します。
+音声バッファは音声データを読み込んで保持しておく場所で、音声関係のコマンドはすべて音声バッファに対して処理を行います。
+音声バッファ番号には0以上の整数値を指定できます。</p>
+<p>読み込んだファイルを再生するには<a href="../../ref/command_ref/#playsound"><code>playsound</code></a>コマンドを使用します。
+音声バッファ0に読み込まれている音声を再生するには以下のように記述します。</p>
+<pre><code class="plain">;playsound buf: 0
+</code></pre>
+
+<p>読み込んだファイルを再生するには<a href="../../ref/command_ref/#stopsound"><code>stopsound</code></a>コマンドを使用します。</p>
+<pre><code class="plain">;stopsound buf: 0
+
+再生停止した後、もしもう音声を使わないのであれば、音声を解放しておいたほうがメモリの節約になります。
+なるべく解放しましょう。
+
+```plain
+;freesound buf: 0
+</code></pre>
+
+<h2 id="_3">ループ再生、音量などの設定</h2>
+<p>音声をループ再生したい場合は、<a href="../../ref/command_ref/#soundopt"><code>soundopt</code></a>コマンドで音声バッファの設定を行います。</p>
+<pre><code class="plain"># ループ再生を有効化、音量50%にする
+;soundopt buf: 0, loop: true, volume: 0.5
+</code></pre>
+
+<h2 id="volumegvolume"><code>volume</code>と<code>gvolume</code>について</h2>
+<p><code>soundopt</code>コマンドで設定できる音量には、<code>volume</code>と<code>gvolume</code>の二つがあります。
+最終的に再生されるときの音量は<code>voluml×gvolume</code>の音量となります。</p>
+<p><code>volume</code>は音声再生時の音量設定に使用してください。
+たとえば同じ「ドアを開けるときの音」という効果音でも、静かにドアを開けるときは音量50%、
+普通に開けるときは音量100%、のように音量に差異を付けたい場合などです。</p>
+<p><code>gvolume</code>はゲーム全体を通したマスター音量の設定に使用してください。
+たとえば、コンフィグ画面で効果音の音量を50%にする場合は、<code>gvolume</code>のほうを0.5に設定します。
+<code>gvolume</code>が0.5なので、たとえ<code>volume</code>が1.0だったとしても50%の音量で再生されます。</p>
+<p><code>gvolume</code>はグローバル音量の略ですが、全音声バッファ共通のボリュームというわけではなく、
+音声バッファごとに個別に設定する必要があることに注意してください。</p>
+<h2 id="_4">読み込み時間について</h2>
+<p>一般的に音声ファイルはファイルサイズが大きいため、読み込みに時間がかかります。
+そのため、音声を再生する直前で<code>loadsound</code>で読み込もうとすると、ゲームが一瞬停止したように見えてしまいます。</p>
+<p>これを回避するために、再生開始するタイミングよりも手前で事前に読み込んでおくと良いでしょう。
+画面が暗転しているときなどに読み込んでおくことで、違和感を低減することができます。</p>
+<h2 id="_5">フェード再生</h2>
+<p>音声のフェード（徐々に音量を変化させる）には<a href="../../ref/command_ref/#fadesound"><code>fadesound</code></a>コマンドを使用してください。</p>
+<p>音声をフェードインしながら再生するときは<a href="../../ref/command_ref/#fadeinsound-fadein"><code>fadeinsound</code></a>コマンドを使用します。</p>
+<p>音声をフェードアウトしながら再生停止したいときは<a href="../../ref/command_ref/#waitsoundstop-waitsound"><code>fadeinsound</code></a>コマンドを使用します。</p>
+<h2 id="_6">再生停止やフェード完了を待つ</h2>
+<p>音声ファイルの最後まで再生し終わるのを待つには、<a href="../../ref/command_ref/#waitsoundstop-waitsound"><code>waitsound</code></a>コマンドを使用します。
+ただし、音声がループ再生されている場合は何もしない（待たずに次に進む）ので注意してください。</p>
+<p>フェードが完了するのを待つには、<a href="../../ref/command_ref/#waitsoundstop-waitsound"><code>waitsoundstop</code></a>コマンドを使用します。
+ただし、音声がフェードされていない場合は何もしない（待たずに次に進む）ので注意してください。</p>
+<h2 id="_7">バッファ番号エイリアス機能</h2>
+<p>バッファ番号エイリアス機能は、バッファ番号指定の番号に名前を付けて、管理を簡単にする機能です。</p>
+<p>たとえば、バッファ0ではBGM、バッファ1では効果音を再生する場合に、
+それぞれのバッファに<code>"bgm"</code>や<code>"se"</code>という名前を付けることができます。
+わかりやすい名前を付けることで、スクリプトの見通しが良くなります。</p>
+<p>バッファ番号エイリアスの設定は、<a href="../../ref/command_ref/#bufalias"><code>bufalias</code></a>コマンドで行います。</p>
+<pre><code class="plain"># ゲーム開始スクリプト
+;call file: &quot;script/init_system.pon&quot;
+
+;bufalias name: &quot;se&quot;, buf: &quot;0&quot;
+;loadsound &quot;buf&quot;: &quot;se&quot;, &quot;file&quot;: &quot;sound/pekowave1.mp3&quot;
+
+こんにちは。
+</code></pre>
                 
                   
                 
@@ -556,6 +742,41 @@ v10.16.3
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../trans/" title="トランジション" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                トランジション
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../jump_call/" title="スクリプト間の移動" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                スクリプト間の移動
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

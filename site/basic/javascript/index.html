@@ -40,7 +40,7 @@
     
     
       
-        <title>Node.js導入（Windows） - Ponkan3 ドキュメント</title>
+        <title>JavaScriptと変数 - Ponkan3 ドキュメント</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#nodejswindows" tabindex="1" class="md-skip">
+      <a href="#javascript" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Node.js導入（Windows）
+                JavaScriptと変数
               
             </span>
           
@@ -238,10 +238,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       チュートリアル
@@ -341,11 +343,97 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../javascript/" title="JavaScriptと変数" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        JavaScriptと変数
+      </label>
+    
+    <a href="./" title="JavaScriptと変数" class="md-nav__link md-nav__link--active">
       JavaScriptと変数
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javascript_1" class="md-nav__link">
+    JavaScriptの実行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    変数の種類
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tv" class="md-nav__link">
+    一時変数tv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gv" class="md-nav__link">
+    ゲーム変数gv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    システム変数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    変数の削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    コマンドで変数の値を使う（エンティティ機能）
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -503,6 +591,70 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javascript_1" class="md-nav__link">
+    JavaScriptの実行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    変数の種類
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tv" class="md-nav__link">
+    一時変数tv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gv" class="md-nav__link">
+    ゲーム変数gv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    システム変数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    変数の削除
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    コマンドで変数の値を使う（エンティティ機能）
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -514,32 +666,102 @@
               
                 
                 
-                <h1 id="nodejswindows">Node.js導入（Windows）</h1>
-<p>注意：今後のNode.jsのバージョンアップで変更が入る可能性があります。
-あくまで参考程度にして下さい。</p>
-<p><a href="https://nodejs.org/ja/">Node.js 日本語サイト</a> からダウンロードします。
-今回は左側のLTS版をいダウンロードします。</p>
-<p><img alt="Node.jsダウンロード" src="../image/download.png" /></p>
-<p>ダウンロードしてきたインストーラーを起動してください。</p>
-<p><img alt="インストーラー01" src="../image/install_01.png" /></p>
-<p>Nextをクリックして次へ進みます。</p>
-<p><img alt="インストーラー02" src="../image/install_02.png" /></p>
-<p>ライセンスに同意して、Nextをクリックします。</p>
-<p><img alt="インストーラー03" src="../image/install_03.png" /></p>
-<p>インストール先を指定します。とくに理由がなければデフォルト値のままにします。</p>
-<p><img alt="インストーラー04" src="../image/install_04.png" /></p>
-<p>インストールするモジュールを選択します。基本的にはそのままにしておきます。</p>
-<p><img alt="インストーラー05" src="../image/install_05.png" /></p>
-<p>Installをクリックすると、実行するかどうかWindowsが確認してきます。「はい」をクリックするとインストールが始まります。</p>
-<p><img alt="インストーラー06" src="../image/install_06.png" /></p>
-<p>インストールが完了したら、Finishで終了します。</p>
-<p>インストールができているかどうか確認します。
-コマンドプロンプトまたはWindows PowerShellを開き、次のコマンドを実行します。</p>
-<pre><code class="bat">&gt; node --version
-v10.16.3
+                <h1 id="javascript">JavaScriptと変数</h1>
+<p>Ponkan3では、スクリプトで任意のJavaScriptを実行することができます。</p>
+<p>また、ゲームの状態を保存しておく場合には、専用の変数を利用します。</p>
+<h2 id="javascript_1">JavaScriptの実行</h2>
+<p>JavaScriptを実行する方法には以下の3種類の書き方があります。</p>
+<pre><code class="plain"># JavaScript行　単純にJavaScriptを実行する
+- console.log(&quot;JavaScript行です&quot;);
+
+# JavaScript行　評価結果をメッセージレイヤーに出力する
+100+200の計算結果は
+= 100 + 200
+です。
+
+# JavaScript部　複数行にわたって記述できる
+---
+let a = 100;
+let b = 200;
+let sum = a + b;
+console.log(&quot;a + b = &quot; + sum);
+---
 </code></pre>
 
-<p>Node.jsのバージョンが表示されれば、インストール完了です。</p>
+<p>行の先頭が<code>-</code>または<code>=</code>から始まっている行は、JavaScript行です。
+<code>-</code>の場合はJavaScriptを実行し、結果は捨てます。
+<code>=</code>の場合は、実行した結果（評価値）を文字列としてメッセージレイヤーに出力します。</p>
+<p><code>---</code>の行から<code>---</code>の行までの間は、JavaScript部です。
+複数行にわたって記述することができるため、長いJavaScriptを書く場合はこちらを利用してください。</p>
+<h2 id="_1">変数の種類</h2>
+<p>ゲームの状態を保存するための変数には、以下の3種類が用意されており、それぞれ役割が異なります。</p>
+<ul>
+<li>一時変数<code>tv</code></li>
+<li>ゲーム変数<code>gv</code></li>
+<li>システム変数<code>sv</code></li>
+</ul>
+<p>これらはすべてJavaScriptにおけるObjectになっていますので、利用するときは以下のように使用します。</p>
+<pre><code class="plain">- tv.a = 100;
+- tv.b = 200;
+- tv.sum = tv.a + tv.b;
+</code></pre>
+
+<h3 id="tv">一時変数<code>tv</code></h3>
+<p>一時変数<code>tv</code>は、一時的な計算値などを格納しておく場所です。
+あくまで一時的な場所なので、セーブデータに保存されることはありません。</p>
+<pre><code class="plain"># 計算結果を保持しておく
+- tv.sum = 100 + 200;
+</code></pre>
+
+<p>一部のコマンドでは、指定の一時変数に値を格納するものがあります。
+（例：<a href="../../ref/command_ref/#for"><code>for</code></a>コマンドのインデックスなど）</p>
+<p>JavaScript部での計算結果などをコマンドに渡したい場合などにも、一時変数を利用することがあります。</p>
+<h3 id="gv">ゲーム変数<code>gv</code></h3>
+<p>ゲーム変数<code>gv</code>は、セーブデータに保存される変数です。
+セーブデータごとに異なる値を保存します。
+シナリオのフラグを保存しておいたり、キャラクターのステータス（HPやレベルなど）を保存しておく用途に使用します。</p>
+<pre><code class="plain"># 花子シナリオをクリアしたフラグ。
+# このフラグが立っていたら、美柑シナリオを解禁する。
+- gv.isClearedHanakoScenario = true;
+</code></pre>
+
+<p>セーブする必要のない値については、一時変数を利用してください。そのほうがセーブデータ容量の節約になります。</p>
+<p>ゲーム変数にJavaScriptのFunctionを格納しないようにしてください。復元できなくなります。</p>
+<h3 id="_2">システム変数</h3>
+<p>システム変数はその名の通り、システム全体を通して使用される変数です。
+ゲーム変数とは異なり、システム全体で一つだけの値を保持しています。
+たとえば、ゲームを一度でもクリアしたかどうかのフラグなどを保存しておく用途に使用します。</p>
+<pre><code class="plain"># どれか一つでもシナリオをクリアしたかどうかのフラグ。
+# このフラグが立っていたら、ギャラリーモードを解禁する。
+sv.isClearedSomeScenario = true;
+</code></pre>
+
+<p>システム変数はゲーム終了時に自動的に保存され、次回以降のゲーム起動時に自動でロードされます。</p>
+<h2 id="_3">変数の削除</h2>
+<p>一度作成した変数は、基本的にはそのまま残っています。</p>
+<p>変数をクリアしたい場合は、以下のコマンドを使用してください。</p>
+<ul>
+<li>一時変数をクリア：<a href="../../ref/command_ref/#cleartmpvar"><code>cleartmpvar</code></a></li>
+<li>ゲーム変数をクリア：<a href="../../ref/command_ref/#cleargamevar"><code>cleargamevar</code></a></li>
+<li>システム変数をクリア：<a href="../../ref/command_ref/#clearsysvar"><code>clearsysvar</code></a></li>
+</ul>
+<p>特定の変数のみ削除したいときは、javascriptの<code>delete</code>文を使ってください。</p>
+<pre><code class="plain"># ゲーム変数の isClearedHanakoScenario のみ削除する
+- delete tv.isClearedHanakoScenario;
+</code></pre>
+
+<h2 id="_4">コマンドで変数の値を使う（エンティティ機能）</h2>
+<p>変数の値をコマンドで使いたいときは、エンティティ機能を使用します。</p>
+<p><code>&amp;tv.name</code>という風に、<code>&amp;</code>に続けて変数名を書くと、パラメータに変数の値設定できます。</p>
+<pre><code class="plain">- tv.posx = 200;
+;layopt lay: 1, x: &quot;&amp;tv.posx&quot;
+</code></pre>
+
+<p>この例では、<code>tv.posx</code>の値をパラメータ<code>x</code>に設定しています。この場合はレイヤー1のx座標が200になります。</p>
+<div class="note">
+正確にはエンティティ機能は、<code>&</code>に続いた文字列をJavaScriptとして評価して、その結果をパラメータとして使用します。
+そのため、<code>;ch text="&'100+200=' + (100+200)"</code>のように簡単な式を書くこともできます。
+</div>
                 
                   
                 
@@ -556,6 +778,41 @@ v10.16.3
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../jump_call/" title="スクリプト間の移動" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                スクリプト間の移動
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../macro/" title="マクロ機能" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                マクロ機能
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
