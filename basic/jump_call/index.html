@@ -40,7 +40,7 @@
     
     
       
-        <title>Node.js導入（Windows） - Ponkan3 ドキュメント</title>
+        <title>スクリプト間の移動 - Ponkan3 ドキュメント</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#nodejswindows" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Node.js導入（Windows）
+                スクリプト間の移動
               
             </span>
           
@@ -238,10 +238,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       チュートリアル
@@ -329,11 +331,103 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../jump_call/" title="スクリプト間の移動" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        スクリプト間の移動
+      </label>
+    
+    <a href="./" title="スクリプト間の移動" class="md-nav__link md-nav__link--active">
       スクリプト間の移動
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    スクリプトを移動する
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    同じスクリプトの別の場所にジャンプする
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    別のスクリプトにジャンプする
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    サブルーチン
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    同じスクリプト内で呼び出す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    別のスクリプトのサブルーチンを呼び出す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    サブルーチンの注意点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -503,6 +597,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    スクリプトを移動する
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    同じスクリプトの別の場所にジャンプする
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    別のスクリプトにジャンプする
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    サブルーチン
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    同じスクリプト内で呼び出す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    別のスクリプトのサブルーチンを呼び出す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    サブルーチンの注意点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -514,32 +678,114 @@
               
                 
                 
-                <h1 id="nodejswindows">Node.js導入（Windows）</h1>
-<p>注意：今後のNode.jsのバージョンアップで変更が入る可能性があります。
-あくまで参考程度にして下さい。</p>
-<p><a href="https://nodejs.org/ja/">Node.js 日本語サイト</a> からダウンロードします。
-今回は左側のLTS版をいダウンロードします。</p>
-<p><img alt="Node.jsダウンロード" src="../image/download.png" /></p>
-<p>ダウンロードしてきたインストーラーを起動してください。</p>
-<p><img alt="インストーラー01" src="../image/install_01.png" /></p>
-<p>Nextをクリックして次へ進みます。</p>
-<p><img alt="インストーラー02" src="../image/install_02.png" /></p>
-<p>ライセンスに同意して、Nextをクリックします。</p>
-<p><img alt="インストーラー03" src="../image/install_03.png" /></p>
-<p>インストール先を指定します。とくに理由がなければデフォルト値のままにします。</p>
-<p><img alt="インストーラー04" src="../image/install_04.png" /></p>
-<p>インストールするモジュールを選択します。基本的にはそのままにしておきます。</p>
-<p><img alt="インストーラー05" src="../image/install_05.png" /></p>
-<p>Installをクリックすると、実行するかどうかWindowsが確認してきます。「はい」をクリックするとインストールが始まります。</p>
-<p><img alt="インストーラー06" src="../image/install_06.png" /></p>
-<p>インストールが完了したら、Finishで終了します。</p>
-<p>インストールができているかどうか確認します。
-コマンドプロンプトまたはWindows PowerShellを開き、次のコマンドを実行します。</p>
-<pre><code class="bat">&gt; node --version
-v10.16.3
+                <h1 id="_1">スクリプト間の移動</h1>
+<p>Ponkan3は<code>start.pon</code>から始まりますが、
+別のスクリプトへ移動したり、別のスクリプトをサブルーチンとして呼び出すことができます。</p>
+<p><code>start.pon</code>にすべての処理を書くと、スクリプトの見通しが悪くなるため、適切にファイルを分割しましょう。</p>
+<p>分割の仕方としては、</p>
+<ul>
+<li>マクロの定義をするのは<code>macro.pon</code></li>
+<li>タイトル画面は<code>title.pon</code></li>
+<li>メインシナリオの1番は<code>scenario01.pon</code></li>
+</ul>
+<p>といった風に、役割ごとに分割しておくのがおすすめです。</p>
+<h2 id="_2">スクリプトを移動する</h2>
+<p>スクリプトを移動する場合は、<a href="../../ref/command_ref/#jump"><code>jump</code></a>コマンドを使用します。</p>
+<p><code>jump</code>コマンドの用途には以下の2つがあります。</p>
+<ul>
+<li>同じスクリプトの別の場所にジャンプする</li>
+<li>別のスクリプトにジャンプする</li>
+</ul>
+<h3 id="_3">同じスクリプトの別の場所にジャンプする</h3>
+<p>同じスクリプト内で移動したい場合は、<code>label</code>パラメータに移動先のラベルを指定します。</p>
+<pre><code class="plain"># ゲーム開始スクリプト
+;call file: &quot;script/init_system.pon&quot;
+
+こんにちは。
+;linebreak
+;br
+
+;jump label: &quot;jump_target_label&quot;
+
+上のjumpコマンドで移動するので、この部分は表示されません。
+
+*jump_target_label
+ジャンプしました。
 </code></pre>
 
-<p>Node.jsのバージョンが表示されれば、インストール完了です。</p>
+<h3 id="_4">別のスクリプトにジャンプする</h3>
+<p>別のスクリプトにジャンプしたい場合は、
+<code>file</code>パラメータに移動先のスクリプトを、
+<code>label</code>パラメータに移動先のラベルを指定します。</p>
+<pre><code class="plain"># ゲーム開始スクリプト
+;call file: &quot;script/init_system.pon&quot;
+
+# title.ponの*start_titleの位置へジャンプする
+;jump file: &quot;title.pon&quot;
+</code></pre>
+
+<p><code>label</code>パラメータは省略することもできます。
+省略した場合、ファイルの先頭にジャンプします。</p>
+<pre><code class="plain"># ゲーム開始スクリプト
+;call file: &quot;script/init_system.pon&quot;
+
+# title.ponの先頭へジャンプする
+;jump file: &quot;title.pon&quot;
+</code></pre>
+
+<h2 id="_5">サブルーチン</h2>
+<p>いくつかの処理をまとめたものをサブルーチンと呼びます。</p>
+<p>サブルーチンは<a href="../../ref/command_ref/"><code>call</code></a>コマンドでほかの場所から呼び出して使います。</p>
+<p><code>jump</code>コマンドが純粋にスクリプトを移動するだけなのに対し、
+サブルーチンでは呼び出し元の場所に戻るという違いがあります。</p>
+<p>以下の例にそって説明します。</p>
+<pre><code class="plain"># ゲーム開始スクリプト
+;call file: &quot;script/init_system.pon&quot;
+
+# サブルーチンを呼び出す
+サブルーチンを呼び出します。
+;linebreak
+;br
+;call label: &quot;subroutine&quot;
+サブルーチンから戻りました。
+;s
+
+# サブルーチン
+*subroutine
+この部分はサブルーチンの処理です。
+;linebreak
+;br
+returnコマンドで呼び出し元に戻ります。
+;linebreak
+;br
+;return
+
+</code></pre>
+
+<p>このスクリプトでは、最初に「サブルーチンを呼び出します。」とメッセージを表示します。</p>
+<p>次に、<code>call</code>コマンドで<code>*subroutine</code>をサブルーチンとして呼び出しています。</p>
+<p>呼び出されたサブルーチンでは、
+「この部分はサブルーチンの処理です。」
+「returnコマンドで呼び出し元に戻ります。」
+のメッセージを表示します。
+そして、<a href="../../ref/command_ref/#return"><code>return</code></a>コマンドで呼び出し元へ戻ります。</p>
+<p>サブルーチンから呼び出し元に戻るので、最後に「サブルーチンから戻りました。」とメッセージを表示します。</p>
+<p>以上が、サブルーチンの基本的な使い方になります。</p>
+<div class="note">
+これまでのスクリプトにも、先頭に<code>;call file: "script/init_system.pon"</code>と書かれていました。
+ここまで説明してきませんでしたが、これはシステム初期化用のスクリプトをサブルーチンとしてい呼び出している処理でした。
+</div>
+
+<h3 id="_6">同じスクリプト内で呼び出す</h3>
+<p><code>jump</code>コマンドと同じく、同じスクリプト内にあるサブルーチンを呼び出す場合は、
+<code>label</code>パラメータのみ指定します。</p>
+<h3 id="_7">別のスクリプトのサブルーチンを呼び出す</h3>
+<p>異なるスクリプトファイルのサブルーチンを呼び出す場合は、<code>file</code>パラメータと<code>label</code>パラメータを指定します。</p>
+<p><code>label</code>パラメータを省略することもできます。その場合は、ファイルの先頭から呼び出されます。</p>
+<h3 id="_8">サブルーチンの注意点</h3>
+<p>サブルーチンでは、必ず最後に<code>return</code>を書くのを忘れないでください。</p>
+<p>サブルーチンの中から、さらに別のサブルーチンを呼び出すことも可能です。
+ただし、自分自身を呼び出すと無限ループする可能性があるので、注意してください。</p>
                 
                   
                 
@@ -556,6 +802,41 @@ v10.16.3
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../sound/" title="音声の再生" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                音声の再生
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../javascript/" title="JavaScriptと変数" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                JavaScriptと変数
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
