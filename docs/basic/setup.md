@@ -72,34 +72,34 @@ Windowsであれば`start.bat`をダブルクリック、Mac/Linuxであれば`s
 作成した新しいゲームディレクトリの中で、は、以下のような構成になっています。
 
 ---
-- \[DIR\] node_modules
+- <i class="md-icon">folder</i> node_modules/
     - 生成直後には存在せず、初回起動時に生成されます。Node.jsのライブラリなどが格納されます。
-- \[DIR\] public
+- <i class="md-icon">folder</i> public/
     - ゲーム本体のファイルが格納されています。
-- \[FILE\] package-lock.json
+- <i class="md-icon">insert_drive_file</i> package-lock.json
     - Node.js用のファイルです。
-- \[FILE\] package.json
+- <i class="md-icon">insert_drive_file</i> package.json
     - Node.js用のファイルです。
-- \[FILE\] start.bat
+- <i class="md-icon">insert_drive_file</i> start.bat
     - Windows用の起動スクリプトです。
-- \[FILE\] start.sh
+- <i class="md-icon">insert_drive_file</i> start.sh
     - Mac、Linux用の起動スクリプトです。
 ---
 
 `public`の下は、以下のような構成になっており、Ponkan3のゲームに関係するファイルがすべて含まれます。
 
 ---
-- public
-    - \[DIR\] fonts
+- <i class="md-icon">folder</i> public/
+    - <i class="md-icon">folder</i> fonts/
         - ゲームで使うフォントファイルが格納されています。
-    - \[DIR\] gamedata
+    - <i class="md-icon">folder</i>  gamedata/
         - ゲームのスクリプト、画像、音声などのリソースファイルがここに格納されています。
           フォント以外のファイルはすべてここに格納します。
-    - \[FILE\] index.html
+    - <i class="md-icon">insert_drive_file</i>  index.html
         - Ponkan3のゲームを表示するためのhtmlファイルです。
-    - \[FILE\] ponkan3.js
+    - <i class="md-icon">insert_drive_file</i>  ponkan3.js
         - Ponkan3の本体です。
-    - \[FILE\] settings.js
+    - <i class="md-icon">insert_drive_file</i>  settings.js
         - ゲームの設定ファイルです。
 ---
 
@@ -140,3 +140,11 @@ Webページのタイトルとして表示される文字列を変更します�
 ```html
   <title>Ponkan3</title>
 ```
+
+### `init_system.pon`の編集
+
+`public/gamedata/script/init_system.pon`では、メッセージのフォントやグリフなどの設定を行います。
+テキストエディタで`init_system.pon`を開いて編集してください。
+
+`init_system.pon`は、今すぐ設定しておくところはありません。
+ゲームを作っていく中で、フォントを変更したり、レイヤー数を変更したくなった時などに参照してください。
