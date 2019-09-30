@@ -349,6 +349,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    最初の設定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settingsjs" class="md-nav__link">
+    settings.jsの編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexhtml" class="md-nav__link">
+    index.htmlの編集
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ページタイトルを変更する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init_systempon" class="md-nav__link">
+    init_system.ponの編集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -663,6 +710,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    最初の設定
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settingsjs" class="md-nav__link">
+    settings.jsの編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexhtml" class="md-nav__link">
+    index.htmlの編集
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ページタイトルを変更する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init_systempon" class="md-nav__link">
+    init_system.ponの編集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -725,27 +819,27 @@
 <p>作成した新しいゲームディレクトリの中で、は、以下のような構成になっています。</p>
 <hr />
 <ul>
-<li>[DIR] node_modules<ul>
+<li><i class="md-icon">folder</i> node_modules/<ul>
 <li>生成直後には存在せず、初回起動時に生成されます。Node.jsのライブラリなどが格納されます。</li>
 </ul>
 </li>
-<li>[DIR] public<ul>
+<li><i class="md-icon">folder</i> public/<ul>
 <li>ゲーム本体のファイルが格納されています。</li>
 </ul>
 </li>
-<li>[FILE] package-lock.json<ul>
+<li><i class="md-icon">insert_drive_file</i> package-lock.json<ul>
 <li>Node.js用のファイルです。</li>
 </ul>
 </li>
-<li>[FILE] package.json<ul>
+<li><i class="md-icon">insert_drive_file</i> package.json<ul>
 <li>Node.js用のファイルです。</li>
 </ul>
 </li>
-<li>[FILE] start.bat<ul>
+<li><i class="md-icon">insert_drive_file</i> start.bat<ul>
 <li>Windows用の起動スクリプトです。</li>
 </ul>
 </li>
-<li>[FILE] start.sh<ul>
+<li><i class="md-icon">insert_drive_file</i> start.sh<ul>
 <li>Mac、Linux用の起動スクリプトです。</li>
 </ul>
 </li>
@@ -754,25 +848,25 @@
 <p><code>public</code>の下は、以下のような構成になっており、Ponkan3のゲームに関係するファイルがすべて含まれます。</p>
 <hr />
 <ul>
-<li>public<ul>
-<li>[DIR] fonts<ul>
+<li><i class="md-icon">folder</i> public/<ul>
+<li><i class="md-icon">folder</i> fonts/<ul>
 <li>ゲームで使うフォントファイルが格納されています。</li>
 </ul>
 </li>
-<li>[DIR] gamedata<ul>
+<li><i class="md-icon">folder</i>  gamedata/<ul>
 <li>ゲームのスクリプト、画像、音声などのリソースファイルがここに格納されています。
   フォント以外のファイルはすべてここに格納します。</li>
 </ul>
 </li>
-<li>[FILE] index.html<ul>
+<li><i class="md-icon">insert_drive_file</i>  index.html<ul>
 <li>Ponkan3のゲームを表示するためのhtmlファイルです。</li>
 </ul>
 </li>
-<li>[FILE] ponkan3.js<ul>
+<li><i class="md-icon">insert_drive_file</i>  ponkan3.js<ul>
 <li>Ponkan3の本体です。</li>
 </ul>
 </li>
-<li>[FILE] settings.js<ul>
+<li><i class="md-icon">insert_drive_file</i>  settings.js<ul>
 <li>ゲームの設定ファイルです。</li>
 </ul>
 </li>
@@ -780,6 +874,38 @@
 </li>
 </ul>
 <hr />
+<h2 id="_6">最初の設定</h2>
+<p>最初にいくつか新しいゲームの設定をしましょう。</p>
+<h3 id="settingsjs"><code>settings.js</code>の編集</h3>
+<p><code>public/settings.js</code>では、ゲーム全体の設定を行います。
+テキストエディタで<code>settings.js</code>を開いて編集してください。</p>
+<p>以下の設定は、必ず変更するようにしてください。</p>
+<pre><code class="javascript">  // ゲームバージョン
+  // ゲームのバージョン番号を設定します。
+  // バージョンアップして再公開する場合は、必ずここの値を変更してください。
+  gameVersion: &quot;0.0.0&quot;,
+
+  // セーブデータ名のプレフィックス
+  // セーブデータを保存する際の名前として使用されます。
+  // 必ず初期値から変更するようにしてください。
+  // もしこの値が同じだと、同じゲームのセーブデータだと判断されてしまいます。
+  saveDataPrefix: &quot;ponkan-sample&quot;,
+</code></pre>
+
+<h3 id="indexhtml"><code>index.html</code>の編集</h3>
+<p><code>public/index.html</code>では、ブラウザ表示に関する設定を行います。
+テキストエディタで<code>settings.js</code>を開いて編集してください。</p>
+<h4 id="_7">ページタイトルを変更する</h4>
+<p>Webページのタイトルとして表示される文字列を変更します。
+初期値は<code>"Ponkan3"</code>となっているので、ゲームタイトルなどに変更してください。</p>
+<pre><code class="html">  &lt;title&gt;Ponkan3&lt;/title&gt;
+</code></pre>
+
+<h3 id="init_systempon"><code>init_system.pon</code>の編集</h3>
+<p><code>public/gamedata/script/init_system.pon</code>では、メッセージのフォントやグリフなどの設定を行います。
+テキストエディタで<code>init_system.pon</code>を開いて編集してください。</p>
+<p><code>init_system.pon</code>は、今すぐ設定しておくところはありません。
+ゲームを作っていく中で、フォントを変更したり、レイヤー数を変更したくなった時などに参照してください。</p>
                 
                   
                 

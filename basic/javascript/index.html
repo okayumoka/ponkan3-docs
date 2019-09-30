@@ -693,6 +693,13 @@ console.log(&quot;a + b = &quot; + sum);
 <code>=</code>の場合は、実行した結果（評価値）を文字列としてメッセージレイヤーに出力します。</p>
 <p><code>---</code>の行から<code>---</code>の行までの間は、JavaScript部です。
 複数行にわたって記述することができるため、長いJavaScriptを書く場合はこちらを利用してください。</p>
+<p>スクリプトから実行するJavaScriptの中では、この後に解説する各種変数に加えて、
+<code>ponkan</code>という変数でPonkan3のインスタンスにアクセスすることができます。</p>
+<pre><code># 変数ponkanにはPonkan3のインスタンスが入っています。
+# 以下はレイヤーのデバッグ情報を表示する例です。
+- ponkan.showLayerDebugInfo();
+</code></pre>
+
 <h2 id="_1">変数の種類</h2>
 <p>ゲームの状態を保存するための変数には、以下の3種類が用意されており、それぞれ役割が異なります。</p>
 <ul>
