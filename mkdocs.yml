@@ -25,7 +25,7 @@ extra:
 extra_css:
   - 'exstyle.css'
 nav:
-  - 目次: '/#index'
+  - はじめに: 'index.md'
   - チュートリアル:
     - 開発の準備（セットアップ）: basic/setup.md
     # - Node.js導入（Windows）: basic/setup_nodejs_win.md
