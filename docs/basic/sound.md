@@ -25,7 +25,7 @@ Ponkan3ではBGMと効果音を特に区別しません。どちらも音声再�
 ;playsound buf: 0
 ```
 
-読み込んだファイルを再生するには[`stopsound`](../ref/command_ref.md#stopsound)コマンドを使用します。
+読み込んだファイルを停止するには[`stopsound`](../ref/command_ref.md#stopsound)コマンドを使用します。
 
 ```plain
 ;stopsound buf: 0
