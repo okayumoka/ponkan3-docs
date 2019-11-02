@@ -40,7 +40,7 @@
     
     
       
-        <title>Node.js導入（Windows） - Ponkan3 ドキュメント</title>
+        <title>動画の再生 - Ponkan3 ドキュメント</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#nodejswindows" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Node.js導入（Windows）
+                動画の再生
               
             </span>
           
@@ -238,10 +238,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       チュートリアル
@@ -329,11 +331,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../video/" title="動画の再生" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        動画の再生
+      </label>
+    
+    <a href="./" title="動画の再生" class="md-nav__link md-nav__link--active">
       動画の再生
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    動画の読み込み、再生、停止、解放
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    動画の再生完了を待つ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    対応する動画ファイル
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -515,6 +569,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    動画の読み込み、再生、停止、解放
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    動画の再生完了を待つ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    対応する動画ファイル
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -526,32 +610,31 @@
               
                 
                 
-                <h1 id="nodejswindows">Node.js導入（Windows）</h1>
-<p>注意：今後のNode.jsのバージョンアップで変更が入る可能性があります。
-あくまで参考程度にして下さい。</p>
-<p><a href="https://nodejs.org/ja/">Node.js 日本語サイト</a> からダウンロードします。
-今回は左側のLTS版をいダウンロードします。</p>
-<p><img alt="Node.jsダウンロード" src="../image/download.png" /></p>
-<p>ダウンロードしてきたインストーラーを起動してください。</p>
-<p><img alt="インストーラー01" src="../image/install_01.png" /></p>
-<p>Nextをクリックして次へ進みます。</p>
-<p><img alt="インストーラー02" src="../image/install_02.png" /></p>
-<p>ライセンスに同意して、Nextをクリックします。</p>
-<p><img alt="インストーラー03" src="../image/install_03.png" /></p>
-<p>インストール先を指定します。とくに理由がなければデフォルト値のままにします。</p>
-<p><img alt="インストーラー04" src="../image/install_04.png" /></p>
-<p>インストールするモジュールを選択します。基本的にはそのままにしておきます。</p>
-<p><img alt="インストーラー05" src="../image/install_05.png" /></p>
-<p>Installをクリックすると、実行するかどうかWindowsが確認してきます。「はい」をクリックするとインストールが始まります。</p>
-<p><img alt="インストーラー06" src="../image/install_06.png" /></p>
-<p>インストールが完了したら、Finishで終了します。</p>
-<p>インストールができているかどうか確認します。
-コマンドプロンプトまたはWindows PowerShellを開き、次のコマンドを実行します。</p>
-<pre><code class="bat">&gt; node --version
-v10.16.3
+                <h1 id="_1">動画再生</h1>
+<p>レイヤー上で動画を再生することができます。</p>
+<p>オープニングムービー、エンディングムービーなどの用途のほか、
+背景に動画を用いることなどもできます。</p>
+<h2 id="_2">動画の読み込み、再生、停止、解放</h2>
+<p>動画を再生するには、<a href="../../ref/command_ref/#loadvideo-video"><code>loadvideo</code></a>コマンドでのレイヤーに動画ファイルを読み込みます。</p>
+<p><code>loadvideo</code>コマンドの<code>autoplay</code>パラメータを<code>true</code>にすると、読み込みと同時に自動的に再生が開始されます。
+読み込みだけ行いたい場合は<code>autoplay: false</code>と指定します。</p>
+<pre><code class="plain">;loadvideo lay: 1, file: &quot;video/sample.mp4&quot;, volume: 1.0, loop: true, width: 640, height: 360, x: 0, y: 0, visible: true
 </code></pre>
 
-<p>Node.jsのバージョンが表示されれば、インストール完了です。</p>
+<p><code>autoplay: false</code>と指定して読み込みだけを実行した場合、再生には<a href="../../ref/command_ref/#playvideo"><code>playvideo</code></a>コマンドを使用します。</p>
+<pre><code class="plain">;playvideo lay: 1
+</code></pre>
+
+<p>読み込んだファイルを停止するには<a href="../../ref/command_ref/#stopvideo"><code>stopvideo</code></a>コマンドを使用します。</p>
+<pre><code class="plain">;stopvideo lay: 1
+</code></pre>
+
+<h2 id="_3">動画の再生完了を待つ</h2>
+<p>動画の最後まで再生し終わるのを待つには、<a href="../../ref/command_ref/#waitvideo"><code>waitvideo</code></a>コマンドを使用します。
+ただし、動画がループ再生されている場合は何もしない（待たずに次に進む）ので注意してください。</p>
+<h2 id="_4">対応する動画ファイル</h2>
+<p>再生可能な動画ファイルはブラウザに依存します。
+H.264形式で圧縮したmp4ファイルなどが広くサポートされています。</p>
                 
                   
                 
@@ -568,6 +651,41 @@ v10.16.3
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../sound/" title="音声の再生" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                音声の再生
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../jump_call/" title="スクリプト間の移動" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                スクリプト間の移動
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
