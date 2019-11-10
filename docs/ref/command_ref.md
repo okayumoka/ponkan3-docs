@@ -7,7 +7,7 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 
 ## コマンド一覧
 
-### その他
+### システム
 
 | コマンド名 | 内容 |
 |------------|------|
@@ -199,7 +199,7 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 | [deletesavedata, delsavedata, delsave](#deletesavedata-delsavedata-delsave) | セーブデータを削除する |
 
 
-## その他
+## システム
 
 ### laycount
 
@@ -567,8 +567,10 @@ forループから抜ける
 | fontfamily | 配列(Array) |  |  | フォント名の配列 |
 | fontsize | 数値(Number) |  |  | フォントサイズ(px) |
 | fontweight | 文字列(String) |  |  | フォントウェイト |
-| fontstyle | 文字列(String) |  |  | フォントスタイル。"normal" | "italic" |
-| color | 数値(Number) |  |  | 文字色(0xRRGGBB) |
+| fontstyle | 文字列(String) |  |  | フォントスタイル。"normal" \| "italic" |
+| color | undefined |  |  | 文字色。0xRRGGBBで指定すると単色、[0xRRGGBB, 0xRRGGBB, ...]のように配列で指定するとグラデーションになります。 |
+| gradientstops | 配列(Array) |  |  | 文字色グラデーションの切り替えポイント([0.0, 0.0, ...]) |
+| gradienttype | 文字列(String) |  |  | 文字色グラデーションのタイプ（方向）。"vertical" \| "horizontal"。初期値は"vertical" |
 | margint | 数値(Number) |  |  | テキスト描画のマージン 上 |
 | marginr | 数値(Number) |  |  | テキスト描画のマージン 右 |
 | marginb | 数値(Number) |  |  | テキスト描画のマージン 下 |
@@ -576,7 +578,7 @@ forループから抜ける
 | pitch | 数値(Number) |  |  | テキストの文字間(px) |
 | lineheight | 数値(Number) |  |  | テキストの行の高さ(px) |
 | linepitch | 数値(Number) |  |  | テキストの行間(px) |
-| align | 文字列(String) |  |  | テキスト寄せの方向。"left" | "center" | "right" |
+| align | 文字列(String) |  |  | テキスト寄せの方向。"left" \| "center" \| "right" |
 | shadow | 真偽値(Boolean) |  |  | 影の表示非表示 |
 | shadowalpha | 数値(Number) |  |  | 影のAlpha(0.0〜1.0) |
 | shadowangle | 数値(Number) |  |  | 影の角度(ラジアン) |
@@ -646,7 +648,7 @@ forループから抜ける
 
 | パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
 |--------------|----------|------|--------------|------|
-| mode | 文字列(String) |  |  | インターバルのモード。"user" | "system" |
+| mode | 文字列(String) |  |  | インターバルのモード。"user" \| "system" |
 | unread | 数値(Number) |  |  | ユーザーモードでの未読文章のインターバル時間(ms) |
 | read | 数値(Number) |  |  | ユーザーモードでの既読文章のインターバル時間(ms) |
 | sysunread | 数値(Number) |  |  | システムモードでの未読文章のインターバル時間(ms) |
@@ -923,7 +925,7 @@ nowaitを終了する
 | marginr | 数値(Number) |  | `0` | テキスト描画のマージン（右）。 |
 | marginb | 数値(Number) |  | `0` | テキスト描画のマージン（下）。 |
 | marginl | 数値(Number) |  | `0` | テキスト描画のマージン（左）。 |
-| align | 文字列(String) |  | `"center"` | テキスト寄せの方向。"left" | "center" | "right" |
+| align | 文字列(String) |  | `"center"` | テキスト寄せの方向。"left" \| "center" \| "right" |
 | countpage | 真偽値(Boolean) |  | `true` | 現在の位置を既読にするかどうか |
 | enterbuf | 文字列(String) |  | `""` | マウスポインタが重なったタイミングで再生する音声の音声バッファ |
 | leavebuf | 文字列(String) |  | `""` | マウスポインタが出て行ったタイミングで再生する音声の音声バッファ |
@@ -1200,8 +1202,8 @@ nowaitを終了する
 | time | 数値(Number) | 〇 |  | 自動移動させる時間 |
 | delay | 数値(Number) |  | `0` | 開始までの遅延時間(ms) |
 | path | 配列(Array) | 〇 |  | 自動移動させる位置を指定 |
-| type | 文字列(String) |  | `"linear"` | 自動移動のタイプ。"linear" | "bezier2" | "bezier3" | "catmullrom" |
-| ease | 文字列(String) |  | `"none"` | 自動移動の入り・抜きの指定。"none" | "in" | "out" | "both" |
+| type | 文字列(String) |  | `"linear"` | 自動移動のタイプ。"linear" \| "bezier2" \| "bezier3" \| "catmullrom" |
+| ease | 文字列(String) |  | `"none"` | 自動移動の入り・抜きの指定。"none" \| "in" \| "out" \| "both" |
 | loop | 真偽値(Boolean) |  |  | 自動移動をループさせるかどうか。タイプが "linear" か "catmullrom" の場合のみ有効 |
 
 レイヤーの自動移動を開始します。
@@ -1468,7 +1470,7 @@ nowaitを終了する
 
 | パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
 |--------------|----------|------|--------------|------|
-| page | 文字列(String) | 〇 |  | 操作対象ページ（"fore" | "back" ）を指定 |
+| page | 文字列(String) | 〇 |  | 操作対象ページ（"fore" \| "back" ）を指定 |
 
 操作対象ページを変更します。
 
@@ -1613,6 +1615,7 @@ nowaitを終了する
 | lay | 文字列(String) | 〇 |  | 対象レイヤー |
 | page | 文字列(String) |  | `"current"` | 対象ページ |
 | volume | 数値(Number) |  |  | 音量(0.0〜1.0) |
+| loop | 真偽値(Boolean) |  |  | ループ再生するかどうか |
 
 動画に関して設定します。
 
@@ -1624,7 +1627,6 @@ nowaitを終了する
 |--------------|----------|------|--------------|------|
 | lay | 文字列(String) | 〇 |  | 対象レイヤー |
 | page | 文字列(String) |  | `"current"` | 対象ページ |
-| loop | 真偽値(Boolean) |  | `false` | ループ再生するかどうか |
 
 動画再生を開始します。
 

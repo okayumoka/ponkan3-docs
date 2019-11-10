@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 class TsFileParser {
   constructor(fileString) {
@@ -42,7 +43,7 @@ class TsFileParser {
 
       let paramLineMatch = line.match(/\/\/\/.*@param(.*)/);
       let paragraphMatch = line.match(/\/\/\/(.*)/);
-      let tagValueMatch = line.match(/new TagValue\(\"([^"]+)\", \"([^,"]+)\",([^,]+),([^,)`]+)/);
+      let tagValueMatch = line.match(/new TagValue\(\"([^']+)\", \"([^,']+)\",([^,]+),([^,)`]+)/);
       if (paramLineMatch != null) {
         // @paramの開始
         value = paramLineMatch[1].trim();
@@ -63,7 +64,7 @@ class TsFileParser {
           type: type.trim(),
           required: required == "true" ? "〇" : "",
           defaultValue: defaultValue == "null" ? "" : "`" + defaultValue + "`",
-          description: value,
+          description: value.replace(/\|/g, "\\|"),
         });
       }
     });
@@ -210,7 +211,27 @@ class TsFileParser {
 
 }
 
-let fileString = fs.readFileSync(process.argv[2], "utf8");
+let dir = path.resolve(process.argv[2]);
+let fileNames = [
+  "system.ts",
+  "script.ts",
+  "macro.ts",
+  "message.ts",
+  "layer.ts",
+  "button.ts",
+  "animation.ts",
+  "layerfilter.ts",
+  "sound.ts",
+  "trans.ts",
+  "history.ts",
+  "video.ts",
+  "save.ts"
+];
+let fileString = "";
+fileNames.forEach((fileName) => {
+  let str = fs.readFileSync(dir + "/" + fileName, "utf8");
+  fileString += str + "\n";
+});
 let tsFileParser = new TsFileParser(fileString);
 tsFileParser.parse();
 tsFileParser.printMd();
