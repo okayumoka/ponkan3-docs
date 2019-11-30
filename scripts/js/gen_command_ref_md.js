@@ -185,7 +185,11 @@ class TsFileParser {
       "string": "文字列(String)",
       "array": "配列(Array)",
       "object": "オブジェクト(Object)",
+      "function": "関数(function)",
+      "string|function": "文字列(String)または関数(function)",
+      "number|array": "数値(Number)または配列(Array)",
     }
+
 
     let md = "";
 

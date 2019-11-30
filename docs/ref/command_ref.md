@@ -568,7 +568,7 @@ forループから抜ける
 | fontsize | 数値(Number) |  |  | フォントサイズ(px) |
 | fontweight | 文字列(String) |  |  | フォントウェイト |
 | fontstyle | 文字列(String) |  |  | フォントスタイル。"normal" \| "italic" |
-| color | undefined |  |  | 文字色。0xRRGGBBで指定すると単色、[0xRRGGBB, 0xRRGGBB, ...]のように配列で指定するとグラデーションになります。 |
+| color | 数値(Number)または配列(Array) |  |  | 文字色。0xRRGGBBで指定すると単色、[0xRRGGBB, 0xRRGGBB, ...]のように配列で指定するとグラデーションになります。 |
 | gradientstops | 配列(Array) |  |  | 文字色グラデーションの切り替えポイント([0.0, 0.0, ...]) |
 | gradienttype | 文字列(String) |  |  | 文字色グラデーションのタイプ（方向）。"vertical" \| "horizontal"。初期値は"vertical" |
 | margint | 数値(Number) |  |  | テキスト描画のマージン 上 |
@@ -1100,7 +1100,7 @@ nowaitを終了する
 | onchange | 文字列(String) |  |  | 値変更時に実行する関数 |
 | x | 数値(Number) |  | `0` | x座標(px) |
 | y | 数値(Number) |  | `0` | y座標(px) |
-| exp | undefined |  | `""` | スライダーの値が変わったときに実行するJavaScript |
+| exp | 文字列(String)または関数(function) |  | `""` | スライダーの値が変わったときに実行するJavaScript |
 | value | 数値(Number) |  | `0` | 初期値(0.0～1.0) |
 | back | 文字列(String) | 〇 |  | スライダーの背景用画像のファイルパス |
 | fore | 文字列(String) | 〇 |  | スライダーの表面画像のファイルパス |
