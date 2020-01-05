@@ -83,7 +83,7 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 |------------|------|
 | [layalias](#layalias) | レイヤー名エイリアスを作成する |
 | [dellayalias](#dellayalias) | レイヤー名エイリアスを削除する |
-| [messagelayer, messagelay, meslay, meslay](#messagelayer-messagelay-meslay-meslay) | メッセージレイヤーを指定する |
+| [messagelayer, messagelay, meslay](#messagelayer-messagelay-meslay) | メッセージレイヤーを指定する |
 | [linebreakglyph, lbglyph](#linebreakglyph-lbglyph) | 行末グリフに関して設定する |
 | [pagebreakglyph, pbglyph](#pagebreakglyph-pbglyph) | ページ末グリフに関して設定する |
 | [fillcolor, fill](#fillcolor-fill) | レイヤーを塗りつぶす |
@@ -142,6 +142,7 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 | [loadsound, sound](#loadsound-sound) | 音声をロードする |
 | [freesound, unloadsound](#freesound-unloadsound) | 音声を開放する |
 | [soundopt](#soundopt) | 音声の設定 |
+| [setsoundstop](#setsoundstop) | 音声の設定 |
 | [playsound](#playsound) | 音声を再生する |
 | [stopsound](#stopsound) | 音声を停止する |
 | [fadesound](#fadesound) | 音声をフェードする |
@@ -765,7 +766,7 @@ nowaitを終了する
 
 [`layalias`](#layalias) で設定したレイヤー名エイリアスを削除します。
 
-### messagelayer, messagelay, meslay, meslay
+### messagelayer, messagelay, meslay
 
 メッセージレイヤーを指定する
 
@@ -786,9 +787,12 @@ nowaitを終了する
 | パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
 |--------------|----------|------|--------------|------|
 | lay | 数値(Number) |  |  | グリフとして使用するレイヤー |
-| pos | 文字列(String) |  |  | グリフの表示位置。"eol"を指定すると文章の末尾に表示。"fixed"を指定すると固定位置で表示。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。 |
-| x | 数値(Number) |  |  | グリフの表示位置（メッセージレイヤーからの相対位置） |
-| y | 数値(Number) |  |  | グリフの表示位置（メッセージレイヤーからの相対位置） |
+| pos | 文字列(String) |  |  | グリフの表示位置。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。 |
+| verticalalign | 文字列(String) |  |  | グリフの縦方向の揃え位置。<br>"top"を指定すると行の上端に揃えて表示。<br>"middle"を指定すると行の中央に揃えて表示。<br>"bottom"を指定すると行の下端に揃えて表示。<br>"text-top"を指定すると直前の一文字の上端に揃えて表示。<br>"text-middle"を指定すると直前の一文字の中央に揃えて表示。 |
+| x | 数値(Number) |  |  | グリフの表示位置。`pos: "relative"` または `pos: "absolute"` の場合のみ有効。 |
+| y | 数値(Number) |  |  | グリフの表示位置。`pos: "relative"` または `pos: "absolute"` の場合のみ有効。 |
+| marginx | 数値(Number) |  |  | グリフの表示位置のマージン。`pos: "relative"` の場合のみ有効。この値分だけ、本来の位置から補正されます。 |
+| marginy | 数値(Number) |  |  | グリフの表示位置のマージン。`pos: "relative"` の場合のみ有効。この値分だけ、本来の位置から補正されます。 |
 
 行末クリック待ち中に表示されるグリフに関して設定します。  
 
@@ -799,9 +803,12 @@ nowaitを終了する
 | パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
 |--------------|----------|------|--------------|------|
 | lay | 数値(Number) |  |  | グリフとして使用するレイヤー |
-| pos | 文字列(String) |  |  | グリフの表示位置。"eol"を指定すると文章の末尾に表示。"fixed"を指定すると固定位置で表示。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。 |
-| x | 数値(Number) |  |  | グリフの表示位置（メッセージレイヤーからの相対位置） |
-| y | 数値(Number) |  |  | グリフの表示位置（メッセージレイヤーからの相対位置） |
+| pos | 文字列(String) |  |  | グリフの表示位置。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。 |
+| verticalalign | 文字列(String) |  |  | グリフの縦方向の揃え位置。<br>"top"を指定すると行の上端に揃えて表示。<br>"middle"を指定すると行の中央に揃えて表示。<br>"bottom"を指定すると行の下端に揃えて表示。<br>"text-top"を指定すると直前の一文字の上端に揃えて表示。<br>"text-middle"を指定すると直前の一文字の中央に揃えて表示。 |
+| x | 数値(Number) |  |  | グリフの表示位置。`pos: "relative"` または `pos: "absolute"` の場合のみ有効。 |
+| y | 数値(Number) |  |  | グリフの表示位置。`pos: "relative"` または `pos: "absolute"` の場合のみ有効。 |
+| marginx | 数値(Number) |  |  | グリフの表示位置のマージン。ここで指定した分だけ、本来の位置から補正されます。 |
+| marginy | 数値(Number) |  |  | グリフの表示位置のマージン。ここで指定した分だけ、本来の位置から補正されます。 |
 
 ページ末クリック待ち中に表示されるグリフに関して設定します。  
 
@@ -912,7 +919,9 @@ nowaitを終了する
 | call | 真偽値(Boolean) |  |  | ボタン押下時にcallする場合はtrue |
 | file | 文字列(String) |  |  | ボタン押下時にjumpまたはcallするスクリプトファイル名 |
 | label | 文字列(String) |  |  | ボタン押下時にjumpまたはcallするラベル名 |
-| exp | 文字列(String) |  |  | ボタン押下時に実行するJavaScript |
+| onclick | 文字列(String) |  |  | マウスポインタが重なったタイミングで実行するJavaScript |
+| onleave | 文字列(String) |  |  | マウスポインタが出ていったタイミングで実行するJavaScript |
+| onclick | 文字列(String) |  |  | ボタン押下時に実行するJavaScript |
 | text | 文字列(String) |  | `""` | テキスト |
 | x | 数値(Number) |  | `0` | x座標(px) |
 | y | 数値(Number) |  | `0` | y座標(px) |
@@ -984,7 +993,9 @@ nowaitを終了する
 | call | 真偽値(Boolean) |  |  | ボタン押下時にcallする場合はtrue |
 | file | 文字列(String) |  |  | ボタン押下時にjumpまたはcallするスクリプトファイル名 |
 | label | 文字列(String) |  |  | ボタン押下時にjumpまたはcallするラベル名 |
-| exp | 文字列(String) |  |  | ボタン押下時に実行するJavaScript |
+| onclick | 文字列(String) |  |  | マウスポインタが重なったタイミングで実行するJavaScript |
+| onleave | 文字列(String) |  |  | マウスポインタが出ていったタイミングで実行するJavaScript |
+| onclick | 文字列(String) |  |  | ボタン押下時に実行するJavaScript |
 | imagefile | 文字列(String) | 〇 |  | ボタンにする画像ファイル |
 | x | 数値(Number) |  | `0` | x座標(px) |
 | y | 数値(Number) |  | `0` | y座標(px) |
@@ -1344,6 +1355,24 @@ nowaitを終了する
 | loop | 真偽値(Boolean) |  |  | ループ再生するかどうか |
 
 音声に関して設定します。
+
+### setsoundstop
+
+音声の設定
+
+| パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
+|--------------|----------|------|--------------|------|
+| buf | 文字列(String) | 〇 |  | バッファ番号 |
+| jump | 真偽値(Boolean) |  | `true` | jumpする場合はtrue |
+| call | 真偽値(Boolean) |  | `false` | callする場合はtrue |
+| file | 文字列(String) |  |  | jumpまたはcallするスクリプトファイル名 |
+| label | 文字列(String) |  |  | jumpまたはcallするラベル名 |
+
+音声が最後まで再生されて停止したときの動作を設定します。
+この設定は、音声が変更された、または音声が停止されたときにクリアされます。
+
+stopsoundなどのタグで停止された場合には動作しません。
+このコマンドを実行した場合は、できるだけ速く`s`コマンドでスクリプトを停止してください。
 
 ### playsound
 

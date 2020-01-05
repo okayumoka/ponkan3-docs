@@ -38,7 +38,7 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
   bgcolors: [0x33B6FF, 0x3D82FF ,0x474FFF],
   bgalphas: [1.0, 1.0, 1.0],
   align: "center",
-  exp: "console.log('テキストボタンを押した')",
+  onclick: "console.log('テキストボタンを押した')",
   jump: true,
   file: "jump_target_file.pon",
   label: "onclick_textbutton",
@@ -58,7 +58,7 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
 もし`jump: true`ではなく`call: true`とパラメータを指定していたら、サブルーチンとして呼び出します。
 また、`jump`コマンドや`call`コマンドと同じように、ファイル名やラベル名を省略することもできます。
 
-`exp`パラメータは、ボタン押下時に実行するJavaScriptです。
+`onclick`パラメータは、ボタン押下時に実行するJavaScriptです。
 この場合はコンソールに「テキストボタンを押した」と出力されます。
 
 ## 画像ボタンの表示
@@ -72,7 +72,7 @@ Ponkan3で分岐処理を実現する方法は2通りあります。
   direction: "horizontal",
   x: 100,
   y: 100,
-  exp: "console.log('画像ボタンを押した！')",
+  onclick: "console.log('画像ボタンを押した！')",
   call: true,
   file: "call_target_file.pon",
   label: "onclick_imagebutton",
