@@ -1008,8 +1008,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#messagelayer-messagelay-meslay-meslay" class="md-nav__link">
-    messagelayer, messagelay, meslay, meslay
+  <a href="#messagelayer-messagelay-meslay" class="md-nav__link">
+    messagelayer, messagelay, meslay
   </a>
   
 </li>
@@ -1328,6 +1328,13 @@
           <li class="md-nav__item">
   <a href="#soundopt" class="md-nav__link">
     soundopt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsoundstop" class="md-nav__link">
+    setsoundstop
   </a>
   
 </li>
@@ -2235,8 +2242,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#messagelayer-messagelay-meslay-meslay" class="md-nav__link">
-    messagelayer, messagelay, meslay, meslay
+  <a href="#messagelayer-messagelay-meslay" class="md-nav__link">
+    messagelayer, messagelay, meslay
   </a>
   
 </li>
@@ -2555,6 +2562,13 @@
           <li class="md-nav__item">
   <a href="#soundopt" class="md-nav__link">
     soundopt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setsoundstop" class="md-nav__link">
+    setsoundstop
   </a>
   
 </li>
@@ -3145,7 +3159,7 @@
 <td>レイヤー名エイリアスを削除する</td>
 </tr>
 <tr>
-<td><a href="#messagelayer-messagelay-meslay-meslay">messagelayer, messagelay, meslay, meslay</a></td>
+<td><a href="#messagelayer-messagelay-meslay">messagelayer, messagelay, meslay</a></td>
 <td>メッセージレイヤーを指定する</td>
 </tr>
 <tr>
@@ -3342,6 +3356,10 @@
 </tr>
 <tr>
 <td><a href="#soundopt">soundopt</a></td>
+<td>音声の設定</td>
+</tr>
+<tr>
+<td><a href="#setsoundstop">setsoundstop</a></td>
 <td>音声の設定</td>
 </tr>
 <tr>
@@ -4730,7 +4748,7 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 </tbody>
 </table>
 <p><a href="#layalias"><code>layalias</code></a> で設定したレイヤー名エイリアスを削除します。</p>
-<h3 id="messagelayer-messagelay-meslay-meslay">messagelayer, messagelay, meslay, meslay</h3>
+<h3 id="messagelayer-messagelay-meslay">messagelayer, messagelay, meslay</h3>
 <p>メッセージレイヤーを指定する</p>
 <table>
 <thead>
@@ -4781,21 +4799,42 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 <td>文字列(String)</td>
 <td></td>
 <td></td>
-<td>グリフの表示位置。"eol"を指定すると文章の末尾に表示。"fixed"を指定すると固定位置で表示。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。</td>
+<td>グリフの表示位置。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。</td>
+</tr>
+<tr>
+<td>verticalalign</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>グリフの縦方向の揃え位置。<br>"top"を指定すると行の上端に揃えて表示。<br>"middle"を指定すると行の中央に揃えて表示。<br>"bottom"を指定すると行の下端に揃えて表示。<br>"text-top"を指定すると直前の一文字の上端に揃えて表示。<br>"text-middle"を指定すると直前の一文字の中央に揃えて表示。</td>
 </tr>
 <tr>
 <td>x</td>
 <td>数値(Number)</td>
 <td></td>
 <td></td>
-<td>グリフの表示位置（メッセージレイヤーからの相対位置）</td>
+<td>グリフの表示位置。<code>pos: "relative"</code> または <code>pos: "absolute"</code> の場合のみ有効。</td>
 </tr>
 <tr>
 <td>y</td>
 <td>数値(Number)</td>
 <td></td>
 <td></td>
-<td>グリフの表示位置（メッセージレイヤーからの相対位置）</td>
+<td>グリフの表示位置。<code>pos: "relative"</code> または <code>pos: "absolute"</code> の場合のみ有効。</td>
+</tr>
+<tr>
+<td>marginx</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>グリフの表示位置のマージン。<code>pos: "relative"</code> の場合のみ有効。この値分だけ、本来の位置から補正されます。</td>
+</tr>
+<tr>
+<td>marginy</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>グリフの表示位置のマージン。<code>pos: "relative"</code> の場合のみ有効。この値分だけ、本来の位置から補正されます。</td>
 </tr>
 </tbody>
 </table>
@@ -4825,21 +4864,42 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 <td>文字列(String)</td>
 <td></td>
 <td></td>
-<td>グリフの表示位置。"eol"を指定すると文章の末尾に表示。"fixed"を指定すると固定位置で表示。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。</td>
+<td>グリフの表示位置。<br>"eol"を指定すると文章の末尾に表示。<br>"relative"を指定するとメッセージレイヤーとの相対位置で固定表示。<br>"absolute"を指定すると画面上の絶対位置で固定表示。</td>
+</tr>
+<tr>
+<td>verticalalign</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>グリフの縦方向の揃え位置。<br>"top"を指定すると行の上端に揃えて表示。<br>"middle"を指定すると行の中央に揃えて表示。<br>"bottom"を指定すると行の下端に揃えて表示。<br>"text-top"を指定すると直前の一文字の上端に揃えて表示。<br>"text-middle"を指定すると直前の一文字の中央に揃えて表示。</td>
 </tr>
 <tr>
 <td>x</td>
 <td>数値(Number)</td>
 <td></td>
 <td></td>
-<td>グリフの表示位置（メッセージレイヤーからの相対位置）</td>
+<td>グリフの表示位置。<code>pos: "relative"</code> または <code>pos: "absolute"</code> の場合のみ有効。</td>
 </tr>
 <tr>
 <td>y</td>
 <td>数値(Number)</td>
 <td></td>
 <td></td>
-<td>グリフの表示位置（メッセージレイヤーからの相対位置）</td>
+<td>グリフの表示位置。<code>pos: "relative"</code> または <code>pos: "absolute"</code> の場合のみ有効。</td>
+</tr>
+<tr>
+<td>marginx</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>グリフの表示位置のマージン。ここで指定した分だけ、本来の位置から補正されます。</td>
+</tr>
+<tr>
+<td>marginy</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>グリフの表示位置のマージン。ここで指定した分だけ、本来の位置から補正されます。</td>
 </tr>
 </tbody>
 </table>
@@ -5264,7 +5324,21 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 <td>ボタン押下時にjumpまたはcallするラベル名</td>
 </tr>
 <tr>
-<td>exp</td>
+<td>onclick</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>マウスポインタが重なったタイミングで実行するJavaScript</td>
+</tr>
+<tr>
+<td>onleave</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>マウスポインタが出ていったタイミングで実行するJavaScript</td>
+</tr>
+<tr>
+<td>onclick</td>
 <td>文字列(String)</td>
 <td></td>
 <td></td>
@@ -5562,7 +5636,21 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 <td>ボタン押下時にjumpまたはcallするラベル名</td>
 </tr>
 <tr>
-<td>exp</td>
+<td>onclick</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>マウスポインタが重なったタイミングで実行するJavaScript</td>
+</tr>
+<tr>
+<td>onleave</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>マウスポインタが出ていったタイミングで実行するJavaScript</td>
+</tr>
+<tr>
+<td>onclick</td>
 <td>文字列(String)</td>
 <td></td>
 <td></td>
@@ -6693,6 +6781,60 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 </tbody>
 </table>
 <p>音声に関して設定します。</p>
+<h3 id="setsoundstop">setsoundstop</h3>
+<p>音声の設定</p>
+<table>
+<thead>
+<tr>
+<th>パラメータ名</th>
+<th>値の種類</th>
+<th>必須</th>
+<th>デフォルト値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buf</td>
+<td>文字列(String)</td>
+<td>〇</td>
+<td></td>
+<td>バッファ番号</td>
+</tr>
+<tr>
+<td>jump</td>
+<td>真偽値(Boolean)</td>
+<td></td>
+<td><code>true</code></td>
+<td>jumpする場合はtrue</td>
+</tr>
+<tr>
+<td>call</td>
+<td>真偽値(Boolean)</td>
+<td></td>
+<td><code>false</code></td>
+<td>callする場合はtrue</td>
+</tr>
+<tr>
+<td>file</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>jumpまたはcallするスクリプトファイル名</td>
+</tr>
+<tr>
+<td>label</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>jumpまたはcallするラベル名</td>
+</tr>
+</tbody>
+</table>
+<p>音声が最後まで再生されて停止したときの動作を設定します。
+この設定は、音声が変更された、または音声が停止されたときにクリアされます。</p>
+<p>stopsoundなどのタグで停止された場合には動作しません。
+このコマンドを実行した場合は、できるだけ速く<code>s</code>コマンドでスクリプトを停止してください。</p>
 <h3 id="playsound">playsound</h3>
 <p>音声を再生する</p>
 <table>

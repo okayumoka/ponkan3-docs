@@ -668,7 +668,7 @@
   bgcolors: [0x33B6FF, 0x3D82FF ,0x474FFF],
   bgalphas: [1.0, 1.0, 1.0],
   align: &quot;center&quot;,
-  exp: &quot;console.log('テキストボタンを押した')&quot;,
+  onclick: &quot;console.log('テキストボタンを押した')&quot;,
   jump: true,
   file: &quot;jump_target_file.pon&quot;,
   label: &quot;onclick_textbutton&quot;,
@@ -686,7 +686,7 @@
 <code>file</code>で指定したスクリプトの<code>label</code>の位置へジャンプします。
 もし<code>jump: true</code>ではなく<code>call: true</code>とパラメータを指定していたら、サブルーチンとして呼び出します。
 また、<code>jump</code>コマンドや<code>call</code>コマンドと同じように、ファイル名やラベル名を省略することもできます。</p>
-<p><code>exp</code>パラメータは、ボタン押下時に実行するJavaScriptです。
+<p><code>onclick</code>パラメータは、ボタン押下時に実行するJavaScriptです。
 この場合はコンソールに「テキストボタンを押した」と出力されます。</p>
 <h2 id="_4">画像ボタンの表示</h2>
 <p>以下のスクリプトは、画面に画像ボタンを表示する例です。</p>
@@ -696,7 +696,7 @@
   direction: &quot;horizontal&quot;,
   x: 100,
   y: 100,
-  exp: &quot;console.log('画像ボタンを押した！')&quot;,
+  onclick: &quot;console.log('画像ボタンを押した！')&quot;,
   call: true,
   file: &quot;call_target_file.pon&quot;,
   label: &quot;onclick_imagebutton&quot;,
