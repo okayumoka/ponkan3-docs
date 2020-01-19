@@ -442,6 +442,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cond" class="md-nav__link">
+    condパラメータ
+  </a>
+  
+</li>
+      
       
       
       
@@ -621,6 +628,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cond" class="md-nav__link">
+    condパラメータ
+  </a>
+  
+</li>
+      
       
       
       
@@ -644,6 +658,8 @@
 <ul>
 <li>ボタンを利用する方法</li>
 <li>変数（JavaScript）の値によって分岐する方法</li>
+<li>ifコマンド</li>
+<li>condパラメータ</li>
 </ul>
 <h2 id="_2">ボタンによる分岐</h2>
 <p>ボタンを押下したときに
@@ -777,6 +793,20 @@ tv.randomJudge = function() {
   君は運がいい。
 ;endif
 </code></pre>
+
+<h2 id="cond">condパラメータ</h2>
+<p>一つのコマンドに対してだけ条件分岐を行いたいときは、<code>cond</code>パラメータを使用すると良いでしょう。</p>
+<p>すべてのコマンドには<code>cond</code>パラメータが用意されています。
+コマンドの実行前にパラメータがJavaScriptとして実行され、値が<code>true</code>の場合のみ、コマンドが実行されます。
+<code>false</code>だったときは、コマンドを実行しません。</p>
+<pre><code># すべてのシナリオをクリアしていたら、true_ending.ponへジャンプする。
+# まだクリアしていなかったら、このままスクリプトを続行する。
+;jump file: &quot;true_ending.pon&quot;, cond: &quot;sv.all_clear&quot;
+</code></pre>
+
+<p><a href="../../ref/command_ref/#if"><code>if</code></a>コマンドよりも簡単に記述できるので、
+複数のコマンドをまとめて制御したいときは<a href="../../ref/command_ref/#if"><code>if</code></a>コマンド、
+単一のコマンドを制御するときは<code>cond</code>パラメータ、という風に使い分けると良いでしょう。</p>
                 
                   
                 

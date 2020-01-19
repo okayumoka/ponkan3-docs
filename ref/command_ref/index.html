@@ -836,6 +836,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#waituntil" class="md-nav__link">
+    waituntil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetwait" class="md-nav__link">
+    resetwait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#waitclick" class="md-nav__link">
     waitclick
   </a>
@@ -885,6 +899,13 @@
           <li class="md-nav__item">
   <a href="#messageopt-mesopt" class="md-nav__link">
     messageopt, mesopt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chineffect" class="md-nav__link">
+    chineffect
   </a>
   
 </li>
@@ -2070,6 +2091,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#waituntil" class="md-nav__link">
+    waituntil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetwait" class="md-nav__link">
+    resetwait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#waitclick" class="md-nav__link">
     waitclick
   </a>
@@ -2119,6 +2154,13 @@
           <li class="md-nav__item">
   <a href="#messageopt-mesopt" class="md-nav__link">
     messageopt, mesopt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chineffect" class="md-nav__link">
+    chineffect
   </a>
   
 </li>
@@ -3050,6 +3092,14 @@
 <td>指定時間を待つ</td>
 </tr>
 <tr>
+<td><a href="#waituntil">waituntil</a></td>
+<td><code>resetwait</code>からの経過時間で待つ</td>
+</tr>
+<tr>
+<td><a href="#resetwait">resetwait</a></td>
+<td><code>waituntil</code> の開始地点を設定する</td>
+</tr>
+<tr>
 <td><a href="#waitclick">waitclick</a></td>
 <td>クリック待ちで停止する</td>
 </tr>
@@ -3086,6 +3136,10 @@
 <tr>
 <td><a href="#messageopt-mesopt">messageopt, mesopt</a></td>
 <td>テキストの設定</td>
+</tr>
+<tr>
+<td><a href="#chineffect">chineffect</a></td>
+<td>文字表示時エフェクトの設定</td>
 </tr>
 <tr>
 <td><a href="#ch">ch</a></td>
@@ -4089,6 +4143,43 @@ call を true に設定した場合、file と label で指定した場所でサ
 <p>指定した時間だけ、スクリプトの動作を停止します。<br />
 <code>canskip: false</code> とした場合、スキップ処理やクリック等でスキップできなくなります。
 イベントシーンなどでは <code>false</code> にしたほうが良いでしょう。</p>
+<h3 id="waituntil">waituntil</h3>
+<p><code>resetwait</code>からの経過時間で待つ</p>
+<table>
+<thead>
+<tr>
+<th>パラメータ名</th>
+<th>値の種類</th>
+<th>必須</th>
+<th>デフォルト値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td>数値(Number)</td>
+<td>〇</td>
+<td></td>
+<td><code>resetwait</code>からの経過時間(ms)</td>
+</tr>
+<tr>
+<td>canskip</td>
+<td>真偽値(Boolean)</td>
+<td></td>
+<td><code>true</code></td>
+<td>スキップ可能かどうか</td>
+</tr>
+</tbody>
+</table>
+<p><code>resetwait</code> コマンドを実行指定した時点から、指定の時間が経過するまで、スクリプトの動作を停止します。<br />
+<code>canskip: false</code> とした場合、スキップ処理やクリック等でスキップできなくなります。
+イベントシーンなどでは <code>false</code> にしたほうが良いでしょう。</p>
+<p><code>resetwait</code> と <code>waituntil</code> との間には、セーブマークを記述しないでください。</p>
+<h3 id="resetwait">resetwait</h3>
+<p><code>waituntil</code> の開始地点を設定する</p>
+<p><code>waituntil</code> コマンドで待つときの時間計測開始地点を設定します。
+<code>resetwait</code> と <code>waituntil</code> との間には、セーブマークを記述しないでください。</p>
 <h3 id="waitclick">waitclick</h3>
 <p>クリック待ちで停止する</p>
 <table>
@@ -4211,7 +4302,7 @@ call を true に設定した場合、file と label で指定した場所でサ
 <td>配列(Array)</td>
 <td></td>
 <td></td>
-<td>文字色グラデーションの切り替えポイント([0.0, 0.0, ...])</td>
+<td>文字色グラデーションの色の位置。0.0～1.0の数値の配列。([0.0, 0.5, ...])</td>
 </tr>
 <tr>
 <td>gradienttype</td>
@@ -4356,6 +4447,79 @@ call を true に設定した場合、file と label で指定した場所でサ
 </tbody>
 </table>
 <p>テキストに関する設定を行います。</p>
+<h3 id="chineffect">chineffect</h3>
+<p>文字表示時エフェクトの設定</p>
+<table>
+<thead>
+<tr>
+<th>パラメータ名</th>
+<th>値の種類</th>
+<th>必須</th>
+<th>デフォルト値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lay</td>
+<td>文字列(String)</td>
+<td></td>
+<td><code>"message"</code></td>
+<td>対象レイヤー</td>
+</tr>
+<tr>
+<td>page</td>
+<td>文字列(String)</td>
+<td></td>
+<td><code>"current"</code></td>
+<td>対象ページ</td>
+</tr>
+<tr>
+<td>type</td>
+<td>文字列(String)または配列(Array)</td>
+<td></td>
+<td></td>
+<td>エフェクトの種類の配列。"alpha" | "move"。例：["alpha", "move"]</td>
+</tr>
+<tr>
+<td>time</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>エフェクトにかける時間(ms)。ゲーム起動時には120msに設定されています。</td>
+</tr>
+<tr>
+<td>ease</td>
+<td>文字列(String)</td>
+<td></td>
+<td><code>"none"</code></td>
+<td>エフェクトの入り・抜きの指定。"none" | "in" | "out" | "both"</td>
+</tr>
+<tr>
+<td>offsetx</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>type: "move"の場合のみ有効。x方向の移動量</td>
+</tr>
+<tr>
+<td>offsety</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>type: "move"の場合のみ有効。y方向の移動量</td>
+</tr>
+</tbody>
+</table>
+<p>文字を表示する際のエフェクトを設定します。<br />
+ゲーム起動時には、何もエフェクトをかけない（none）設定になっています。</p>
+<p><code>type</code> に設定した値によって、文字を表示する際にエフェクトがかかります。</p>
+<ul>
+<li><code>alpha</code> ： alpha値をフェードしながら表示（フェードイン）</li>
+<li><code>move</code> ：  移動しながら表示</li>
+</ul>
+<p>複数のエフェクトを設定することもできます。
+たとえば <code>type: ["alpha", "move"]</code> と設定すると、移動とフェードを同時に実行します。</p>
 <h3 id="ch">ch</h3>
 <p>文字を出力する</p>
 <table>
