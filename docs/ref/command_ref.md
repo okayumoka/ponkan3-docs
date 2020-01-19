@@ -49,6 +49,8 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 | [stopautomode, stopauto](#stopautomode-stopauto) | オートモードを停止する |
 | [automodeopt, autoopt](#automodeopt-autoopt) | オートモードの設定 |
 | [wait](#wait) | 指定時間を待つ |
+| [waituntil](#waituntil) | `resetwait`からの経過時間で待つ |
+| [resetwait](#resetwait) | `waituntil` の開始地点を設定する |
 | [waitclick](#waitclick) | クリック待ちで停止する |
 
 ### マクロ
@@ -63,6 +65,7 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 | コマンド名 | 内容 |
 |------------|------|
 | [messageopt, mesopt](#messageopt-mesopt) | テキストの設定 |
+| [chineffect](#chineffect) | 文字表示時エフェクトの設定 |
 | [ch](#ch) | 文字を出力する |
 | [ruby](#ruby) | 改行する |
 | [br](#br) | 改行する |
@@ -523,6 +526,28 @@ forループから抜ける
 `canskip: false` とした場合、スキップ処理やクリック等でスキップできなくなります。
 イベントシーンなどでは `false` にしたほうが良いでしょう。
 
+### waituntil
+
+`resetwait`からの経過時間で待つ
+
+| パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
+|--------------|----------|------|--------------|------|
+| time | 数値(Number) | 〇 |  | `resetwait`からの経過時間(ms) |
+| canskip | 真偽値(Boolean) |  | `true` | スキップ可能かどうか |
+
+`resetwait` コマンドを実行指定した時点から、指定の時間が経過するまで、スクリプトの動作を停止します。  
+`canskip: false` とした場合、スキップ処理やクリック等でスキップできなくなります。
+イベントシーンなどでは `false` にしたほうが良いでしょう。
+
+`resetwait` と `waituntil` との間には、セーブマークを記述しないでください。
+
+### resetwait
+
+`waituntil` の開始地点を設定する
+
+`waituntil` コマンドで待つときの時間計測開始地点を設定します。
+`resetwait` と `waituntil` との間には、セーブマークを記述しないでください。
+
 ### waitclick
 
 クリック待ちで停止する
@@ -570,7 +595,7 @@ forループから抜ける
 | fontweight | 文字列(String) |  |  | フォントウェイト |
 | fontstyle | 文字列(String) |  |  | フォントスタイル。"normal" \| "italic" |
 | color | 数値(Number)または配列(Array) |  |  | 文字色。0xRRGGBBで指定すると単色、[0xRRGGBB, 0xRRGGBB, ...]のように配列で指定するとグラデーションになります。 |
-| gradientstops | 配列(Array) |  |  | 文字色グラデーションの切り替えポイント([0.0, 0.0, ...]) |
+| gradientstops | 配列(Array) |  |  | 文字色グラデーションの色の位置。0.0～1.0の数値の配列。([0.0, 0.5, ...]) |
 | gradienttype | 文字列(String) |  |  | 文字色グラデーションのタイプ（方向）。"vertical" \| "horizontal"。初期値は"vertical" |
 | margint | 数値(Number) |  |  | テキスト描画のマージン 上 |
 | marginr | 数値(Number) |  |  | テキスト描画のマージン 右 |
@@ -593,6 +618,31 @@ forループから抜ける
 | rubyoffset | 数値(Number) |  |  | ルビのオフセット(px) |
 
 テキストに関する設定を行います。
+
+### chineffect
+
+文字表示時エフェクトの設定
+
+| パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
+|--------------|----------|------|--------------|------|
+| lay | 文字列(String) |  | `"message"` | 対象レイヤー |
+| page | 文字列(String) |  | `"current"` | 対象ページ |
+| type | 文字列(String)または配列(Array) |  |  | エフェクトの種類の配列。"alpha" \| "move"。例：["alpha", "move"] |
+| time | 数値(Number) |  |  | エフェクトにかける時間(ms)。ゲーム起動時には120msに設定されています。 |
+| ease | 文字列(String) |  | `"none"` | エフェクトの入り・抜きの指定。"none" \| "in" \| "out" \| "both" |
+| offsetx | 数値(Number) |  |  | type: "move"の場合のみ有効。x方向の移動量 |
+| offsety | 数値(Number) |  |  | type: "move"の場合のみ有効。y方向の移動量 |
+
+文字を表示する際のエフェクトを設定します。  
+ゲーム起動時には、何もエフェクトをかけない（none）設定になっています。
+
+`type` に設定した値によって、文字を表示する際にエフェクトがかかります。
+
+- `alpha` ： alpha値をフェードしながら表示（フェードイン）
+- `move` ：  移動しながら表示
+
+複数のエフェクトを設定することもできます。
+たとえば `type: ["alpha", "move"]` と設定すると、移動とフェードを同時に実行します。
 
 ### ch
 
