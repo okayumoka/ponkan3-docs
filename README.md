@@ -1,6 +1,6 @@
 # Ponkan3 Documents
 
-Documents for [Ponkan3](https://github.com/okayumoka/ponkan3)
+Documents for [Ponkan3](https://github.com/studiomikan/ponkan3)
 
 ## build and deploy
 
