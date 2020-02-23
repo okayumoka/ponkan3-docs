@@ -144,7 +144,7 @@ class TsFileParser {
 
   printMdHeadetText() {
     let md = "# コマンドリファレンス\n\n" +
-             "Ponkan3 のスクリプトで使用できる全てのコマンドの解説です。\n" +
+             "Ponkan のスクリプトで使用できる全てのコマンドの解説です。\n" +
              "\n" +
              "コマンドの中には、長いコマンドをタイプする手間を省くため、別名が設けられているものがあります。\n" +
              "たとえば `startautomode` と `startauto` と `auto` は名前は異なりますが全て同じ動作をします。\n";

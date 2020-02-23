@@ -1,19 +1,19 @@
 # 開発の準備（セットアップ）
 
-Ponkan3でゲーム開発を始めるための準備をします。
+Ponkanでゲーム開発を始めるための準備をします。
 
-## Ponkan3の入手
+## Ponkanの入手
 
-Ponkan3の最新版はGitHubで公開しています。
+Ponkanの最新版はGitHubで公開しています。
 
 以下のリンクから、最新版のzipファイルをダウンロードしてください。
 
-[Ponkan3最新版](https://github.com/okayumoka/ponkan3/archive/master.zip)
+[Ponkan最新版](https://github.com/studiomikan/ponkan/archive/master.zip)
 
 Gitが使える方は`git clone`したほうが最新版へ更新しやすいのでそちらのほうが良いです。
 
 ```sh
-$ git clone https://github.com/okayumoka/ponkan3.git
+$ git clone https://github.com/studiomikan/ponkan.git
 ```
 
 ## Node.jsの導入
@@ -34,7 +34,7 @@ LTS版（長期サポートの安定板）と最新版がありますが、ど�
 
 ## 新しいゲームを作成する
 
-新しいゲーム用に、Ponkan3関連のファイルをコピーします。
+新しいゲーム用に、Ponkan関連のファイルをコピーします。
 
 あらかじめ、コピーをするためのスクリプトが用意されていますので、それを利用します。
 
@@ -86,7 +86,7 @@ Windowsであれば`start.bat`をダブルクリック、Mac/Linuxであれば`s
     - Mac、Linux用の起動スクリプトです。
 ---
 
-`public`の下は、以下のような構成になっており、Ponkan3のゲームに関係するファイルがすべて含まれます。
+`public`の下は、以下のような構成になっており、Ponkanのゲームに関係するファイルがすべて含まれます。
 
 ---
 - <i class="md-icon">folder</i> public/
@@ -96,9 +96,9 @@ Windowsであれば`start.bat`をダブルクリック、Mac/Linuxであれば`s
         - ゲームのスクリプト、画像、音声などのリソースファイルがここに格納されています。
           フォント以外のファイルはすべてここに格納します。
     - <i class="md-icon">insert_drive_file</i>  index.html
-        - Ponkan3のゲームを表示するためのhtmlファイルです。
-    - <i class="md-icon">insert_drive_file</i>  ponkan3.js
-        - Ponkan3の本体です。
+        - Ponkanのゲームを表示するためのhtmlファイルです。
+    - <i class="md-icon">insert_drive_file</i>  ponkan.js
+        - Ponkanの本体です。
     - <i class="md-icon">insert_drive_file</i>  settings.js
         - ゲームの設定ファイルです。
 ---
@@ -135,10 +135,10 @@ Windowsであれば`start.bat`をダブルクリック、Mac/Linuxであれば`s
 #### ページタイトルを変更する
 
 Webページのタイトルとして表示される文字列を変更します。
-初期値は`"Ponkan3"`となっているので、ゲームタイトルなどに変更してください。
+初期値は`"Ponkan"`となっているので、ゲームタイトルなどに変更してください。
 
 ```html
-  <title>Ponkan3</title>
+  <title>Ponkan</title>
 ```
 
 ### `init_system.pon`の編集

@@ -1,9 +1,9 @@
-site_name: 'Ponkan3 ドキュメント'
-site_description: 'Ponkan3 ドキュメント'
+site_name: 'Ponkan ドキュメント'
+site_description: 'Ponkan ドキュメント'
 site_author: 'okayu'
 copyright: '&copy; 2019 <a href="https://studiomikan.net/">Studio Mikan</a>'
-repo_name: 'okayumoka/ponkan3-docs'
-repo_url: https://github.com/okayumoka/ponkan3-docs
+repo_name: 'studiomikan/ponkan-docs'
+repo_url: https://github.com/studiomikan/ponkan-docs
 edit_uri: ''
 theme:
   name: 'material'
@@ -21,7 +21,7 @@ extra:
     languaextra:
   social:
     - type: 'github'
-      link: 'https://github.com/okayumoka/ponkan3'
+      link: 'https://github.com/studiomikan/ponkan'
 extra_css:
   - 'exstyle.css'
 nav:

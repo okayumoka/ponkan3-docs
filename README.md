@@ -1,6 +1,6 @@
-# Ponkan3 Documents
+# Ponkan Documents
 
-Documents for [Ponkan3](https://github.com/studiomikan/ponkan3)
+Documents for [Ponkan](https://github.com/studiomikan/ponkan)
 
 ## build and deploy
 
@@ -10,8 +10,8 @@ Using [MkDocs](https://github.com/mkdocs/mkdocs/).
 install mkdocs
 > scripts/bat/install-mkdocs.bat
 
-fetch ponkan3 source
-> scripts/bat/clone-ponkan3.bat
+fetch ponkan source
+> scripts/bat/clone-ponkan.bat
 
 case of only build
 > scripts/bat/build.bat

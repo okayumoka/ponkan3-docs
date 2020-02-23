@@ -1,6 +1,6 @@
 # コマンドリファレンス
 
-Ponkan3 のスクリプトで使用できる全てのコマンドの解説です。
+Ponkan のスクリプトで使用できる全てのコマンドの解説です。
 
 コマンドの中には、長いコマンドをタイプする手間を省くため、別名が設けられているものがあります。
 たとえば `startautomode` と `startauto` と `auto` は名前は異なりますが全て同じ動作をします。
@@ -67,7 +67,8 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 | [messageopt, mesopt](#messageopt-mesopt) | テキストの設定 |
 | [chineffect](#chineffect) | 文字表示時エフェクトの設定 |
 | [ch](#ch) | 文字を出力する |
-| [ruby](#ruby) | 改行する |
+| [ruby](#ruby) | ルビを出力する |
+| [rubyopt](#rubyopt) | ルビの設定 |
 | [br](#br) | 改行する |
 | [clear, c](#clear-c) | テキストをクリアする |
 | [textspeed](#textspeed) | 文字出力のインターバルを設定 |
@@ -215,7 +216,7 @@ Ponkan3 のスクリプトで使用できる全てのコマンドの解説です
 
 レイヤーの総数を変更します。
 
-Ponkan3初期化時のレイヤー数は40です。40では多すぎる場合・足りない場合は、
+Ponkan初期化時のレイヤー数は40です。40では多すぎる場合・足りない場合は、
 このコマンドでレイヤー数を変更してください。
 
 レイヤー数の変更は頻繁には行わないでください。
@@ -613,9 +614,7 @@ forループから抜ける
 | shadowdistance | 数値(Number) |  |  | 影の距離(px) |
 | edgewidth | 数値(Number) |  |  | 縁取りの太さ(px)。0で非表示になる |
 | edgecolor | 数値(Number) |  |  | 縁取りの色(0xRRGGBB) |
-| rubysize | 数値(Number) |  |  | ルビのフォントファイズ(px) |
-| rubypitch | 数値(Number) |  |  | ルビの文字間(px) |
-| rubyoffset | 数値(Number) |  |  | ルビのオフセット(px) |
+| edgealpha | 数値(Number) |  |  | 縁取りのAlpha(0.0～1.0) |
 
 テキストに関する設定を行います。
 
@@ -659,7 +658,7 @@ forループから抜ける
 
 ### ruby
 
-改行する
+ルビを出力する
 
 | パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
 |--------------|----------|------|--------------|------|
@@ -668,6 +667,35 @@ forループから抜ける
 | text | 文字列(String) |  |  | ルビ |
 
 次に出力する文字にルビ（ふりがな）を設定します。
+
+### rubyopt
+
+ルビの設定
+
+| パラメータ名 | 値の種類 | 必須 | デフォルト値 | 説明 |
+|--------------|----------|------|--------------|------|
+| lay | 文字列(String) |  | `"message"` | 対象レイヤー |
+| page | 文字列(String) |  | `"current"` | 対象ページ |
+| offset | 数値(Number) |  |  | ルビとメッセージ間の距離(px)。 |
+| fontfamily | 配列(Array) |  |  | フォント名の配列 |
+| fontsize | 数値(Number) |  |  | フォントサイズ(px) |
+| fontweight | 文字列(String) |  |  | フォントウェイト |
+| fontstyle | 文字列(String) |  |  | フォントスタイル。"normal" \| "italic" |
+| color | 数値(Number)または配列(Array) |  |  | 文字色。0xRRGGBBで指定すると単色、[0xRRGGBB, 0xRRGGBB, ...]のように配列で指定するとグラデーションになります。 |
+| gradientstops | 配列(Array) |  |  | 文字色グラデーションの色の位置。0.0～1.0の数値の配列。([0.0, 0.5, ...]) |
+| gradienttype | 文字列(String) |  |  | 文字色グラデーションのタイプ（方向）。"vertical" \| "horizontal"。初期値は"vertical" |
+| pitch | 数値(Number) |  |  | テキストの文字間(px) |
+| shadow | 真偽値(Boolean) |  |  | 影の表示非表示 |
+| shadowalpha | 数値(Number) |  |  | 影のAlpha(0.0〜1.0) |
+| shadowangle | 数値(Number) |  |  | 影の角度(ラジアン) |
+| shadowblur | 数値(Number) |  |  | 影のBlur |
+| shadowcolor  | 数値(Number) |  |  | 影の色(0xRRGGBB) |
+| shadowdistance | 数値(Number) |  |  | 影の距離(px) |
+| edgewidth | 数値(Number) |  |  | 縁取りの太さ(px)。0で非表示になる |
+| edgecolor | 数値(Number) |  |  | 縁取りの色(0xRRGGBB) |
+| edgealpha | 数値(Number) |  |  | 縁取りのAlpha(0.0～1.0) |
+
+ルビ（ふりがな）に関する設定を行います。
 
 ### br
 
@@ -903,6 +931,7 @@ nowaitを終了する
 | autohide | 真偽値(Boolean) |  |  | hidemessagesで同時に隠すかどうか |
 | scalex | 数値(Number) |  |  | x軸方向のスケール。1.0で等倍 |
 | scaley | 数値(Number) |  |  | y軸方向のスケール。1.0で等倍 |
+| ignorequake | 真偽値(Boolean) |  |  | quakeコマンドの対象外フラグ。このフラグをtrueにするとquakeで揺れなくなります。 |
 | blocklclick | 真偽値(Boolean) |  |  | 左クリックイベントを遮断するかどうか |
 | blockrclick | 真偽値(Boolean) |  |  | 右クリックイベントを遮断するかどうか |
 | blockcclick | 真偽値(Boolean) |  |  | 中クリックイベントを遮断するかどうか |

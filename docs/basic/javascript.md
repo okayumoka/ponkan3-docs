@@ -1,6 +1,6 @@
 # JavaScriptと変数
 
-Ponkan3では、スクリプトで任意のJavaScriptを実行することができます。
+Ponkanでは、スクリプトで任意のJavaScriptを実行することができます。
 
 また、ゲームの状態を保存しておく場合には、専用の変数を利用します。
 
@@ -34,10 +34,10 @@ console.log("a + b = " + sum);
 複数行にわたって記述することができるため、長いJavaScriptを書く場合はこちらを利用してください。
 
 スクリプトから実行するJavaScriptの中では、この後に解説する各種変数に加えて、
-`ponkan`という変数でPonkan3のインスタンスにアクセスすることができます。
+`ponkan`という変数でPonkanのインスタンスにアクセスすることができます。
 
 ```
-# 変数ponkanにはPonkan3のインスタンスが入っています。
+# 変数ponkanにはPonkanのインスタンスが入っています。
 # 以下はレイヤーのデバッグ情報を表示する例です。
 - ponkan.showLayerDebugInfo();
 ```
