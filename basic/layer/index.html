@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Ponkan3 ドキュメント">
+        <meta name="description" content="Ponkan ドキュメント">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>レイヤーとページ - Ponkan3 ドキュメント</title>
+        <title>レイヤーとページ - Ponkan ドキュメント</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Ponkan3 ドキュメント" class="md-header-nav__button md-logo">
+        <a href="../.." title="Ponkan ドキュメント" class="md-header-nav__button md-logo">
           
             <i class="md-icon">build</i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Ponkan3 ドキュメント
+              Ponkan ドキュメント
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -168,7 +168,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
           </div>
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Ponkan3 ドキュメント" class="md-nav__button md-logo">
+    <a href="../.." title="Ponkan ドキュメント" class="md-nav__button md-logo">
       
         <i class="md-icon">build</i>
       
     </a>
-    Ponkan3 ドキュメント
+    Ponkan ドキュメント
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -215,7 +215,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
     </div>
@@ -734,7 +734,7 @@
                 
                 <h1 id="_1">レイヤーとページ</h1>
 <h2 id="_2">レイヤーの基礎</h2>
-<p>Ponkan3の画面表示はすべて、重ね合わせたレイヤーで表示されています。
+<p>Ponkanの画面表示はすべて、重ね合わせたレイヤーで表示されています。
 Photoshopなどの画像編集ソフトのレイヤーと同じようなものです。</p>
 <p>以下のスクリプトと画面を例に説明します。</p>
 <pre><code class="plain"># ゲーム開始スクリプト
@@ -766,7 +766,7 @@ Photoshopなどの画像編集ソフトのレイヤーと同じようなもの�
 </div>
 
 <h2 id="_3">ページ</h2>
-<p>Ponkan3では、上記で説明したレイヤー構成が2組あり、それぞれ表ページ・裏ページと呼びます。</p>
+<p>Ponkanでは、上記で説明したレイヤー構成が2組あり、それぞれ表ページ・裏ページと呼びます。</p>
 <p>表ページは画面に表示されている方のページです。通常、コマンドで操作する対象は表ページになります。</p>
 <p>裏ページは画面に表示されません。コマンドで操作するためには、パラメータで<code>page: "back"</code>と明示的に指定する必要があります。</p>
 <p>前述のとおり、通常のコマンド実行では表ページが操作対象になります。
@@ -890,18 +890,18 @@ Photoshopなどの画像編集ソフトのレイヤーと同じようなもの�
 </code></pre>
 
 <p>このようにわかりやすい名前を付けることで、スクリプトの見通しが良くなります。</p>
-<p>ただし、Ponkan3で最初から使用されている名前（<code>"message"</code>、<code>"mes"</code>、<code>"linebreak"</code>、<code>"pagebreak"</code>、<code>"automode"</code>、<code>"auto"</code>）は
+<p>ただし、Ponkanで最初から使用されている名前（<code>"message"</code>、<code>"mes"</code>、<code>"linebreak"</code>、<code>"pagebreak"</code>、<code>"automode"</code>、<code>"auto"</code>）は
 使用できないので注意してください。</p>
 <h2 id="2kag3">吉里吉里2/KAG3との差異</h2>
-<p>Ponkan3のレイヤーと吉里吉里2/KAG3のレイヤでは色々な違いがありますが、
+<p>Ponkanのレイヤーと吉里吉里2/KAG3のレイヤでは色々な違いがありますが、
 大きな違いは以下の2点です。</p>
 <ul>
-<li>Ponkan3では、すべてのレイヤーで画像表示とメッセージ表示の両方が実行できます。<ul>
-<li>KAG3では背景レイヤ、前景レイヤ、メッセージレイヤと3種類のレイヤがありましたが、Ponkan3では区別はありません。</li>
+<li>Ponkanでは、すべてのレイヤーで画像表示とメッセージ表示の両方が実行できます。<ul>
+<li>KAG3では背景レイヤ、前景レイヤ、メッセージレイヤと3種類のレイヤがありましたが、Ponkanでは区別はありません。</li>
 </ul>
 </li>
-<li>Ponkan3では、レイヤーの表示順序は固定です。<ul>
-<li>KAG3では<code>index</code>属性でレイヤの重ね合わせ順序を変更できましたが、Ponkan3では変更できません。</li>
+<li>Ponkanでは、レイヤーの表示順序は固定です。<ul>
+<li>KAG3では<code>index</code>属性でレイヤの重ね合わせ順序を変更できましたが、Ponkanでは変更できません。</li>
 </ul>
 </li>
 </ul>
@@ -975,7 +975,7 @@ Photoshopなどの画像編集ソフトのレイヤーと同じようなもの�
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/okayumoka/ponkan3" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/studiomikan/ponkan" class="md-footer-social__link fa fa-github"></a>
     
   </div>
 

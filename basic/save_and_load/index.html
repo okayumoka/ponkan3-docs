@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Ponkan3 ドキュメント">
+        <meta name="description" content="Ponkan ドキュメント">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>セーブ＆ロード機能 - Ponkan3 ドキュメント</title>
+        <title>セーブ＆ロード機能 - Ponkan ドキュメント</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Ponkan3 ドキュメント" class="md-header-nav__button md-logo">
+        <a href="../.." title="Ponkan ドキュメント" class="md-header-nav__button md-logo">
           
             <i class="md-icon">build</i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Ponkan3 ドキュメント
+              Ponkan ドキュメント
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -168,7 +168,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
           </div>
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Ponkan3 ドキュメント" class="md-nav__button md-logo">
+    <a href="../.." title="Ponkan ドキュメント" class="md-nav__button md-logo">
       
         <i class="md-icon">build</i>
       
     </a>
-    Ponkan3 ドキュメント
+    Ponkan ドキュメント
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -215,7 +215,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
     </div>
@@ -640,13 +640,13 @@
                 
                 <h1 id="_1">セーブ＆ロード</h1>
 <div class="note">
-Ponkan3のセーブは、吉里吉里2/KAG3のセーブの仕様を参考にしています。<br>
-KAG3がラベルの位置の状態をセーブしていたのに対して、Ponkan3ではセーブマークの位置の状態をセーブします。
+Ponkanのセーブは、吉里吉里2/KAG3のセーブの仕様を参考にしています。<br>
+KAG3がラベルの位置の状態をセーブしていたのに対して、Ponkanではセーブマークの位置の状態をセーブします。
 </div>
 
 <h2 id="_2">セーブマーク行の意味</h2>
-<p>Ponkan3のセーブは、少し複雑な仕様になっています。</p>
-<p>Ponkan3でセーブデータを保存しても、<em>セーブする瞬間の状態は保存されません。</em>
+<p>Ponkanのセーブは、少し複雑な仕様になっています。</p>
+<p>Ponkanでセーブデータを保存しても、<em>セーブする瞬間の状態は保存されません。</em>
 その瞬間ではなく、<em>最後にセーブマーク行を通過した時点の状態</em>が保存されます。</p>
 <p>以下に例を示します。</p>
 <pre><code class="plain"># ゲーム開始スクリプト
@@ -676,7 +676,7 @@ KAG3がラベルの位置の状態をセーブしていたのに対して、Ponk
 見出しはセーブデータに保存され、セーブ画面でそのまま見出しとして表示されます。
 プレイヤーに見えるテキストなので、わかりやすい見出しを付けるようにしましょう。</p>
 <p>セーブマークの直後には、必ず<code>clear</code>コマンドを書くようにしてください。
-これは、Ponkan3のセーブデータにはメッセージ情報が保存されないためです。</p>
+これは、Ponkanのセーブデータにはメッセージ情報が保存されないためです。</p>
 <h2 id="_3">セーブマークを書いてはいけない場所</h2>
 <p>以下のような場所には、セーブマークを書かないようにしてください。</p>
 <ul>
@@ -717,7 +717,7 @@ KAG3がラベルの位置の状態をセーブしていたのに対して、Ponk
 <h2 id="_5">セーブマーク名を明示する</h2>
 <p>実はここまでのセーブマークはすべて、セーブマーク名を省略した記法でした。
 セーブマーク名は見出しテキストとは別のもので、セーブマークを区別するためにつける名前です。</p>
-<p>セーブマーク名を省略すると、Ponkan3が自動で <code>__save_mark_0__</code> というような名前を割り振ります。
+<p>セーブマーク名を省略すると、Ponkanが自動で <code>__save_mark_0__</code> というような名前を割り振ります。
 数字の部分はスクリプトファイルの中で連番になります。</p>
 <p>セーブマーク名を明示する場合は、以下のように書きます。
 <code>my_save_mark</code>の部分がセーブマーク名になります。</p>
@@ -732,7 +732,7 @@ KAG3がラベルの位置の状態をセーブしていたのに対して、Ponk
 <p>通常、セーブマーク名は省略してしまったので問題ありません。
 ただし、ゲームを一度リリースした後にアップデートするときは、明示しないといけない場合があります。</p>
 <h2 id="_6">セーブマーク名を省略できないパターン</h2>
-<p>Ponkan3はセーブデータをロードしたとき、セーブデータに保存されているセーブマーク名を利用して、
+<p>Ponkanはセーブデータをロードしたとき、セーブデータに保存されているセーブマーク名を利用して、
 スクリプトのどの部分を実行していたかを把握します。</p>
 <p>では、もしゲームのバージョンアップで、セーブマークの数が増減したとしたら、どうでしょうか。
 例にそって考えていきましょう。</p>
@@ -868,7 +868,7 @@ KAG3がラベルの位置の状態をセーブしていたのに対して、Ponk
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/okayumoka/ponkan3" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/studiomikan/ponkan" class="md-footer-social__link fa fa-github"></a>
     
   </div>
 

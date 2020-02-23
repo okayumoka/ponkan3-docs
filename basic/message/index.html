@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Ponkan3 ドキュメント">
+        <meta name="description" content="Ponkan ドキュメント">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>メッセージ（文章）の表示 - Ponkan3 ドキュメント</title>
+        <title>メッセージ（文章）の表示 - Ponkan ドキュメント</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Ponkan3 ドキュメント" class="md-header-nav__button md-logo">
+        <a href="../.." title="Ponkan ドキュメント" class="md-header-nav__button md-logo">
           
             <i class="md-icon">build</i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Ponkan3 ドキュメント
+              Ponkan ドキュメント
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -168,7 +168,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
           </div>
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Ponkan3 ドキュメント" class="md-nav__button md-logo">
+    <a href="../.." title="Ponkan ドキュメント" class="md-nav__button md-logo">
       
         <i class="md-icon">build</i>
       
     </a>
-    Ponkan3 ドキュメント
+    Ponkan ドキュメント
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -215,7 +215,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
     </div>
@@ -695,10 +695,10 @@
                 <h1 id="_1">メッセージ（文章）の表示</h1>
 <h2 id="_2">スクリプトでメッセージを出す</h2>
 <p>まずは何でもいいので、とにかくテキストを表示してみましょう。</p>
-<p>Ponkan3では、スクリプトファイルに書いた文字列（テキスト）がそのままメッセージとして画面に表示されるようになっています。</p>
+<p>Ponkanでは、スクリプトファイルに書いた文字列（テキスト）がそのままメッセージとして画面に表示されるようになっています。</p>
 <p><code>gamedata</code>ディレクトリの下に<code>start.pon</code>というファイルがあります。
 これが、ゲームが開始したときに一番最初に実行されるスクリプトファイルになります。
-Ponkan3のゲームはすべて<code>start.pon</code>から始まります。</p>
+Ponkanのゲームはすべて<code>start.pon</code>から始まります。</p>
 <p><code>start.pon</code>をテキストエディタで開いてみましょう。
 テンプレートからゲームを作成した直後は、以下のような内容になっています。</p>
 <pre><code class="plain"># ゲーム開始スクリプト
@@ -713,17 +713,17 @@ Ponkan3のゲームはすべて<code>start.pon</code>から始まります。</p
 <p>画面に「こんにちは」と表示されました。</p>
 <p>先ほどの<code>start.pon</code>スクリプトにも「こんにちは。」と記載されている部分がありましたね。
 その他にも色々な記載がありますが、まずは「こんにちは。」の部分だけに注目してください。</p>
-<p>では試しに、この部分を「はじめてのPonkan3」に変更してみましょう。</p>
+<p>では試しに、この部分を「はじめてのPonkan」に変更してみましょう。</p>
 <pre><code class="plain"># ゲーム開始スクリプト
 ;call file: &quot;script/init_system.pon&quot;
 
-はじめてのPonkan3
+はじめてのPonkan
 </code></pre>
 
 <p>このように編集してから、ブラウザのページを再読み込みしてみてください。</p>
-<p><img alt="はじめてのPonkan3" src="../image/message_02.png" /></p>
-<p>今度は「はじめてのPonkan3」と表示されましたね。</p>
-<p>このように、Ponkan3のスクリプトでは、特殊な記述（命令）以外のテキストはすべて画面に表示されるようになっています。</p>
+<p><img alt="はじめてのPonkan" src="../image/message_02.png" /></p>
+<p>今度は「はじめてのPonkan」と表示されましたね。</p>
+<p>このように、Ponkanのスクリプトでは、特殊な記述（命令）以外のテキストはすべて画面に表示されるようになっています。</p>
 <h2 id="startpon">start.ponの解説</h2>
 <p>先ほどの<code>start.pon</code>では、いくつかの特殊な記述（命令）が使われています。</p>
 <pre><code class="plain"># ゲーム開始スクリプト                   ←コメント行
@@ -739,9 +739,9 @@ Ponkan3のゲームはすべて<code>start.pon</code>から始まります。</p
 スクリプトファイルに書かれている内容について補足や解説を書くことができます。</p>
 <h3 id="_4">コマンド行</h3>
 <p>行の先頭が<code>;</code>から始まっている行は、コマンド行です。
-コマンド行は、Ponkan3の様々な機能を実行するための命令文です。</p>
+コマンド行は、Ponkanの様々な機能を実行するための命令文です。</p>
 <p>たとえば先ほどのスクリプトでは、<code>call</code>コマンドを実行して、別のスクリプトファイルを呼び出して実行しています。</p>
-<p>Ponkan3には様々なコマンドが用意されており、コマンドを駆使することで大抵のことは実現できるようになっています。</p>
+<p>Ponkanには様々なコマンドが用意されており、コマンドを駆使することで大抵のことは実現できるようになっています。</p>
 <p>コマンドの詳細については、<a href="../../ref/command_ref/">コマンドリファレンス</a>に記載されています。
 ただ、数が膨大ですので、まずはこのマニュアルのチュートリアルを一通り体験してから参照するとよいでしょう。</p>
 <h3 id="_5">テキスト</h3>
@@ -750,7 +750,7 @@ Ponkan3のゲームはすべて<code>start.pon</code>から始まります。</p
 <h2 id="_6">行末でクリックを待つ</h2>
 <p>次に、行末記号を出しながらプレイヤーのクリックを待つようにしてみましょう。</p>
 <p>行末でクリックを待つには、<code>linebreak</code>コマンドを使用します。</p>
-<p>また、Ponkan3ではスクリプト中に改行があっても、メッセージは改行されません。
+<p>また、Ponkanではスクリプト中に改行があっても、メッセージは改行されません。
 メッセージを改行するには、<code>br</code>コマンドを使用する必要があります。</p>
 <p>では、スクリプトを次のように変更してみましょう！</p>
 <pre><code class="plain"># ゲーム開始スクリプト
@@ -875,7 +875,7 @@ Ponkan3のゲームはすべて<code>start.pon</code>から始まります。</p
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/okayumoka/ponkan3" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/studiomikan/ponkan" class="md-footer-social__link fa fa-github"></a>
     
   </div>
 

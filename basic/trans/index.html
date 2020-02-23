@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Ponkan3 ドキュメント">
+        <meta name="description" content="Ponkan ドキュメント">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>トランジション - Ponkan3 ドキュメント</title>
+        <title>トランジション - Ponkan ドキュメント</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Ponkan3 ドキュメント" class="md-header-nav__button md-logo">
+        <a href="../.." title="Ponkan ドキュメント" class="md-header-nav__button md-logo">
           
             <i class="md-icon">build</i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Ponkan3 ドキュメント
+              Ponkan ドキュメント
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -168,7 +168,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
           </div>
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Ponkan3 ドキュメント" class="md-nav__button md-logo">
+    <a href="../.." title="Ponkan ドキュメント" class="md-nav__button md-logo">
       
         <i class="md-icon">build</i>
       
     </a>
-    Ponkan3 ドキュメント
+    Ponkan ドキュメント
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -215,7 +215,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
     </div>
@@ -694,7 +694,7 @@
                 
                 <h1 id="_1">トランジション</h1>
 <p>フェードインなどの効果を適用しながら場面を移ることをトランジションと呼びます。</p>
-<p>Ponkan3では、クロスフェードトランジション、ユニバーサルトランジションがサポートされています。</p>
+<p>Ponkanでは、クロスフェードトランジション、ユニバーサルトランジションがサポートされています。</p>
 <p>トランジションは<a href="../../ref/command_ref/#trans"><code>trans</code></a>コマンドで実行できますが、トランジションする前に、いろいろと準備が必要です。</p>
 <h2 id="_2">クロスフェードトランジション</h2>
 <p>クロスフェードトランジションは最も単純なトランジションです。
@@ -716,7 +716,7 @@
 <p>境界の部分があいまいになったのがわかると思います。<code>vague</code>を設定すると、表ページと裏ページが混在している領域を作ることができます。
 <code>vague</code>には<code>0.0～1.0</code>の値を設定することができます。</p>
 <h2 id="_4">トランジションとページ</h2>
-<p>「<a href="../layer/">レイヤーとページ</a>」でも説明しましたが、Ponkan3のレイヤーには表ページと裏ページがあり、
+<p>「<a href="../layer/">レイヤーとページ</a>」でも説明しましたが、Ponkanのレイヤーには表ページと裏ページがあり、
 ゲーム開始時はどちらも全く同じ状態になっています。</p>
 <p>トランジションは、表ページをだんだんと非表示にしつつ、裏ページをだんだんと表示していく、という動きになります。</p>
 <p>トランジションが終わると、表ページと裏ページが入れ替わります。それまで裏ページだったものは表ページになり、表ページだったものは裏ページになります。</p>
@@ -785,7 +785,7 @@
 </code></pre>
 
 <p><code>waittrans</code>コマンドは、トランジションの完了を待つコマンドです。
-Ponkan3の<code>trans</code>コマンドは、トランジションが完了するのを待ちません。<code>waittrans</code>コマンドがない場合は、トランジションをしながら処理が継続してしまいますので、注意してください。
+Ponkanの<code>trans</code>コマンドは、トランジションが完了するのを待ちません。<code>waittrans</code>コマンドがない場合は、トランジションをしながら処理が継続してしまいますので、注意してください。
 （逆に、そのような処理をやりたいことがあるかもしれません。）</p>
 <p><code>trans</code>が実行されると、カレントページが表ページに戻されます。
 したがって、「入れ替え完了。」のテキストは表ページに出力されるので、ちゃんと画面に表示されます。</p>
@@ -799,13 +799,13 @@ Ponkan3の<code>trans</code>コマンドは、トランジションが完了す�
 </ol>
 <h2 id="2kag3">吉里吉里2/KAG3との差異</h2>
 <ul>
-<li>Ponkan3では、ルール画像が小さいときは画面と同じサイズに拡大されて使用されます。<ul>
+<li>Ponkanでは、ルール画像が小さいときは画面と同じサイズに拡大されて使用されます。<ul>
 <li>KAG3では、画面を覆えるまでタイル状に敷き詰められて使用されます。</li>
 </ul>
 </li>
 <li>スクロールトランジションは現在未実装です。</li>
 <li>拡張トランジションは未実装です。</li>
-<li>Ponkan3では、全レイヤー一括のトランジションのみ対応しています。<ul>
+<li>Ponkanでは、全レイヤー一括のトランジションのみ対応しています。<ul>
 <li>KAG3では<code>[trans layer="1" time="1000"]</code>のようにして個別にトランジションできますが、このようなことはできません。</li>
 </ul>
 </li>
@@ -880,7 +880,7 @@ Ponkan3の<code>trans</code>コマンドは、トランジションが完了す�
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/okayumoka/ponkan3" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/studiomikan/ponkan" class="md-footer-social__link fa fa-github"></a>
     
   </div>
 

@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Ponkan3 ドキュメント">
+        <meta name="description" content="Ponkan ドキュメント">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>コマンドリファレンス - Ponkan3 ドキュメント</title>
+        <title>コマンドリファレンス - Ponkan ドキュメント</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Ponkan3 ドキュメント" class="md-header-nav__button md-logo">
+        <a href="../.." title="Ponkan ドキュメント" class="md-header-nav__button md-logo">
           
             <i class="md-icon">build</i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Ponkan3 ドキュメント
+              Ponkan ドキュメント
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -168,7 +168,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
           </div>
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Ponkan3 ドキュメント" class="md-nav__button md-logo">
+    <a href="../.." title="Ponkan ドキュメント" class="md-nav__button md-logo">
       
         <i class="md-icon">build</i>
       
     </a>
-    Ponkan3 ドキュメント
+    Ponkan ドキュメント
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/okayumoka/ponkan3-docs" title="リポジトリへ" class="md-source" data-md-source="github">
+<a href="https://github.com/studiomikan/ponkan-docs" title="リポジトリへ" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -215,7 +215,7 @@
     </div>
   
   <div class="md-source__repository">
-    okayumoka/ponkan3-docs
+    studiomikan/ponkan-docs
   </div>
 </a>
     </div>
@@ -920,6 +920,13 @@
           <li class="md-nav__item">
   <a href="#ruby" class="md-nav__link">
     ruby
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rubyopt" class="md-nav__link">
+    rubyopt
   </a>
   
 </li>
@@ -2180,6 +2187,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#rubyopt" class="md-nav__link">
+    rubyopt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#br" class="md-nav__link">
     br
   </a>
@@ -2935,7 +2949,7 @@
                 
                 
                 <h1 id="_1">コマンドリファレンス</h1>
-<p>Ponkan3 のスクリプトで使用できる全てのコマンドの解説です。</p>
+<p>Ponkan のスクリプトで使用できる全てのコマンドの解説です。</p>
 <p>コマンドの中には、長いコマンドをタイプする手間を省くため、別名が設けられているものがあります。
 たとえば <code>startautomode</code> と <code>startauto</code> と <code>auto</code> は名前は異なりますが全て同じ動作をします。</p>
 <h2 id="_2">コマンド一覧</h2>
@@ -3147,7 +3161,11 @@
 </tr>
 <tr>
 <td><a href="#ruby">ruby</a></td>
-<td>改行する</td>
+<td>ルビを出力する</td>
+</tr>
+<tr>
+<td><a href="#rubyopt">rubyopt</a></td>
+<td>ルビの設定</td>
 </tr>
 <tr>
 <td><a href="#br">br</a></td>
@@ -3626,7 +3644,7 @@
 </tbody>
 </table>
 <p>レイヤーの総数を変更します。</p>
-<p>Ponkan3初期化時のレイヤー数は40です。40では多すぎる場合・足りない場合は、
+<p>Ponkan初期化時のレイヤー数は40です。40では多すぎる場合・足りない場合は、
 このコマンドでレイヤー数を変更してください。</p>
 <p>レイヤー数の変更は頻繁には行わないでください。
 ゲーム開始時に必要なレイヤー数に設定し、以後は変更しないという使い方をしてください。</p>
@@ -4424,25 +4442,11 @@ call を true に設定した場合、file と label で指定した場所でサ
 <td>縁取りの色(0xRRGGBB)</td>
 </tr>
 <tr>
-<td>rubysize</td>
+<td>edgealpha</td>
 <td>数値(Number)</td>
 <td></td>
 <td></td>
-<td>ルビのフォントファイズ(px)</td>
-</tr>
-<tr>
-<td>rubypitch</td>
-<td>数値(Number)</td>
-<td></td>
-<td></td>
-<td>ルビの文字間(px)</td>
-</tr>
-<tr>
-<td>rubyoffset</td>
-<td>数値(Number)</td>
-<td></td>
-<td></td>
-<td>ルビのオフセット(px)</td>
+<td>縁取りのAlpha(0.0～1.0)</td>
 </tr>
 </tbody>
 </table>
@@ -4559,7 +4563,7 @@ call を true に設定した場合、file と label で指定した場所でサ
 <p>指定したレイヤーに文字を出力します。<br />
 デフォルトではカレントメッセージレイヤーが操作対象です。</p>
 <h3 id="ruby">ruby</h3>
-<p>改行する</p>
+<p>ルビを出力する</p>
 <table>
 <thead>
 <tr>
@@ -4595,6 +4599,162 @@ call を true に設定した場合、file と label で指定した場所でサ
 </tbody>
 </table>
 <p>次に出力する文字にルビ（ふりがな）を設定します。</p>
+<h3 id="rubyopt">rubyopt</h3>
+<p>ルビの設定</p>
+<table>
+<thead>
+<tr>
+<th>パラメータ名</th>
+<th>値の種類</th>
+<th>必須</th>
+<th>デフォルト値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lay</td>
+<td>文字列(String)</td>
+<td></td>
+<td><code>"message"</code></td>
+<td>対象レイヤー</td>
+</tr>
+<tr>
+<td>page</td>
+<td>文字列(String)</td>
+<td></td>
+<td><code>"current"</code></td>
+<td>対象ページ</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>ルビとメッセージ間の距離(px)。</td>
+</tr>
+<tr>
+<td>fontfamily</td>
+<td>配列(Array)</td>
+<td></td>
+<td></td>
+<td>フォント名の配列</td>
+</tr>
+<tr>
+<td>fontsize</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>フォントサイズ(px)</td>
+</tr>
+<tr>
+<td>fontweight</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>フォントウェイト</td>
+</tr>
+<tr>
+<td>fontstyle</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>フォントスタイル。"normal" | "italic"</td>
+</tr>
+<tr>
+<td>color</td>
+<td>数値(Number)または配列(Array)</td>
+<td></td>
+<td></td>
+<td>文字色。0xRRGGBBで指定すると単色、[0xRRGGBB, 0xRRGGBB, ...]のように配列で指定するとグラデーションになります。</td>
+</tr>
+<tr>
+<td>gradientstops</td>
+<td>配列(Array)</td>
+<td></td>
+<td></td>
+<td>文字色グラデーションの色の位置。0.0～1.0の数値の配列。([0.0, 0.5, ...])</td>
+</tr>
+<tr>
+<td>gradienttype</td>
+<td>文字列(String)</td>
+<td></td>
+<td></td>
+<td>文字色グラデーションのタイプ（方向）。"vertical" | "horizontal"。初期値は"vertical"</td>
+</tr>
+<tr>
+<td>pitch</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>テキストの文字間(px)</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td>真偽値(Boolean)</td>
+<td></td>
+<td></td>
+<td>影の表示非表示</td>
+</tr>
+<tr>
+<td>shadowalpha</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>影のAlpha(0.0〜1.0)</td>
+</tr>
+<tr>
+<td>shadowangle</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>影の角度(ラジアン)</td>
+</tr>
+<tr>
+<td>shadowblur</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>影のBlur</td>
+</tr>
+<tr>
+<td>shadowcolor</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>影の色(0xRRGGBB)</td>
+</tr>
+<tr>
+<td>shadowdistance</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>影の距離(px)</td>
+</tr>
+<tr>
+<td>edgewidth</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>縁取りの太さ(px)。0で非表示になる</td>
+</tr>
+<tr>
+<td>edgecolor</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>縁取りの色(0xRRGGBB)</td>
+</tr>
+<tr>
+<td>edgealpha</td>
+<td>数値(Number)</td>
+<td></td>
+<td></td>
+<td>縁取りのAlpha(0.0～1.0)</td>
+</tr>
+</tbody>
+</table>
+<p>ルビ（ふりがな）に関する設定を行います。</p>
 <h3 id="br">br</h3>
 <p>改行する</p>
 <table>
@@ -5231,6 +5391,13 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
 <td></td>
 <td></td>
 <td>y軸方向のスケール。1.0で等倍</td>
+</tr>
+<tr>
+<td>ignorequake</td>
+<td>真偽値(Boolean)</td>
+<td></td>
+<td></td>
+<td>quakeコマンドの対象外フラグ。このフラグをtrueにするとquakeで揺れなくなります。</td>
 </tr>
 <tr>
 <td>blocklclick</td>
@@ -8029,7 +8196,7 @@ user モード時は、ユーザー（プレイヤー）が設定画面等から
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/okayumoka/ponkan3" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/studiomikan/ponkan" class="md-footer-social__link fa fa-github"></a>
     
   </div>
 
