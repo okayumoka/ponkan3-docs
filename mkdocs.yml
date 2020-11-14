@@ -1,34 +1,42 @@
 site_name: 'Ponkan ドキュメント'
 site_description: 'Ponkan ドキュメント'
 site_author: 'okayu'
-copyright: '&copy; 2019 <a href="https://studiomikan.net/">Studio Mikan</a>'
+copyright: '&copy; 2020 <a href="https://studiomikan.net/ target="_blank">Studio Mikan</a>'
 repo_name: 'studiomikan/ponkan-docs'
 repo_url: https://github.com/studiomikan/ponkan-docs
 edit_uri: ''
 theme:
-  name: 'material'
+  name: material
   language: 'ja'
+  palette:
+    primary: deep orange
+    accent: 'Deep Orange'
   font:
     text: 'Noto Sans JP'
     code: 'Inconsolata'
-  palette:
-    primary: 'Deep Orange'
-    accent: 'Deep Orange'
-  logo:
-    icon: 'build'
+  favicon: assets/images/favicon.ico
+  icon:
+    logo: material/library
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - header.autohide
 extra:
   search:
     languaextra:
   social:
-    - type: 'github'
-      link: 'https://github.com/studiomikan/ponkan'
+    - icon: fontawesome/brands/github
+      link: https://github.com/studiomikan/ponkan
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/studiomikan
 extra_css:
   - 'exstyle.css'
 nav:
   - はじめに: 'index.md'
   - チュートリアル:
     - 開発の準備（セットアップ）: basic/setup.md
-    # - Node.js導入（Windows）: basic/setup_nodejs_win.md
+    - Node.js導入（Windows）: basic/setup_nodejs_win.md
     - メッセージ（文章）の表示: basic/message.md
     - 画像の表示: basic/image.md
     - レイヤーとページ: basic/layer.md

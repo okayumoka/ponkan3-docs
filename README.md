@@ -4,7 +4,17 @@ Documents for [Ponkan](https://github.com/studiomikan/ponkan)
 
 ## build and deploy
 
-Using [MkDocs](https://github.com/mkdocs/mkdocs/).
+Using [MkDocs](https://github.com/mkdocs/mkdocs/)
+and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+
+### Docker
+
+```bash
+docker-compose build
+docker-compose up
+```
+
+### Windows
 
 ```bat
 install mkdocs
