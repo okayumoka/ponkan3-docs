@@ -44,7 +44,7 @@ Ponkanで分岐処理を実現する方法は以下の2通りあります。
   jump: true,
   file: "jump_target_file.pon",
   label: "onclick_textbutton",
-}
+};
 ;unlockbuttons
 ;s
 ```
@@ -78,7 +78,7 @@ Ponkanで分岐処理を実現する方法は以下の2通りあります。
   call: true,
   file: "call_target_file.pon",
   label: "onclick_imagebutton",
-}
+};
 ```
 
 画像ボタンでは、ボタンとして表示するための画像ファイルが必要です。
